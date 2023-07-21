@@ -8,15 +8,11 @@ import { authRoutes } from './auth';
 import { errorRoutes } from './error';
 import { commonRoutes } from './common';
 import { careerRoutes } from './career';
-import { travelRoutes } from './travel';
-import { marketingRoutes } from './marketing';
-import { eLearningRoutes } from './elearning';
-import { eCommerceRoutes } from './ecommerce';
-import { componentsRoutes } from './components';
 
 // ----------------------------------------------------------------------
 
 const IndexPage = lazy(() => import('src/pages/home'));
+const LandingPage = lazy(() => import('src/pages/career/landing'));
 const SupportPage = lazy(() => import('src/pages/support'));
 
 export default function Router() {
@@ -30,20 +26,10 @@ export default function Router() {
         </MainLayout>
       ),
       children: [
-        { element: <IndexPage />, index: true },
+        { element: <LandingPage />, index: true },
         { path: 'support', element: <SupportPage /> },
 
-        ...marketingRoutes,
-
-        ...travelRoutes,
-
         ...careerRoutes,
-
-        ...eLearningRoutes,
-
-        ...eCommerceRoutes,
-
-        ...componentsRoutes,
       ],
     },
 

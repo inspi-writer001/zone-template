@@ -15,11 +15,13 @@ import { paths } from 'src/routes/paths';
 import Label from 'src/components/label';
 import { useResponsive } from 'src/hooks/use-responsive';
 import { useOffSetTop } from 'src/hooks/use-off-set-top';
+import { useSettingsContext } from 'src/components/settings';
 
 import { HEADER } from '../config-layout';
 import Searchbar from '../common/searchbar';
 import HeaderShadow from '../common/header-shadow';
 import SettingsButton from '../common/settings-button';
+import BaseOptions from '../../components/settings/drawer/base-options';
 
 import NavMobile from './nav/mobile';
 import NavDesktop from './nav/desktop';
@@ -33,6 +35,8 @@ export default function Header({ headerOnDark }) {
   const offset = useOffSetTop();
 
   const mdUp = useResponsive('up', 'md');
+
+  const settings = useSettingsContext();
 
   return (
     <AppBar>
@@ -89,21 +93,15 @@ export default function Header({ headerOnDark }) {
           <Stack spacing={2} direction="row" alignItems="center" justifyContent="flex-end">
             <Stack spacing={1} direction="row" alignItems="center">
               <Searchbar />
-
-              <SettingsButton />
+              <BaseOptions
+                selected={settings.themeMode === 'dark'}
+                onClick={() =>
+                  settings.onUpdate('themeMode', settings.themeMode === 'dark' ? 'light' : 'dark')
+                }
+                icons={['carbon:asleep', 'carbon:asleep-filled']}
+              />
+              {/* <SettingsButton /> */}
             </Stack>
-
-            {mdUp && (
-              <Button
-                variant="contained"
-                color="inherit"
-                href={paths.zoneStore}
-                target="_blank"
-                rel="noopener"
-              >
-                Buy Now
-              </Button>
-            )}
           </Stack>
 
           {!mdUp && <NavMobile data={navConfig} />}

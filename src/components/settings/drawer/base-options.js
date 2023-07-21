@@ -20,7 +20,7 @@ export default function BaseOptions({ title, icons, selected, ...other }) {
       {...other}
     >
       <Typography variant="subtitle2">{title}</Typography>
-      <Iconify width={28} icon={selected ? icons[1] : icons[0]} />
+      <Iconify width={20} icon={selected ? icons[1] : icons[0]} />
     </ListItemButton>
   );
 }
