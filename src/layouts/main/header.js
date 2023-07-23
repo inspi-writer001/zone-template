@@ -1,25 +1,22 @@
 import PropTypes from 'prop-types';
 
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import { useTheme } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
 
 import { bgBlur } from 'src/theme/css';
-import Logo from 'src/components/logo';
-import { paths } from 'src/routes/paths';
-import Label from 'src/components/label';
 import { useResponsive } from 'src/hooks/use-responsive';
 import { useOffSetTop } from 'src/hooks/use-off-set-top';
+import { useSettingsContext } from 'src/components/settings';
 
 import { HEADER } from '../config-layout';
 import Searchbar from '../common/searchbar';
 import HeaderShadow from '../common/header-shadow';
-import SettingsButton from '../common/settings-button';
+import BaseOptions from '../../components/settings/drawer/base-options';
 
 import NavMobile from './nav/mobile';
 import NavDesktop from './nav/desktop';
@@ -33,6 +30,8 @@ export default function Header({ headerOnDark }) {
   const offset = useOffSetTop();
 
   const mdUp = useResponsive('up', 'md');
+
+  const settings = useSettingsContext();
 
   return (
     <AppBar>
@@ -63,9 +62,17 @@ export default function Header({ headerOnDark }) {
           sx={{ height: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
         >
           <Box sx={{ lineHeight: 0, position: 'relative' }}>
-            <Logo />
-
-            <Link href="https://zone-docs.vercel.app/changelog" target="_blank" rel="noopener">
+            <Stack direction="row">
+              <img src="/assets/logo/logo.png" alt="logo" width="100px" />
+              <Typography
+                variant="h3"
+                sx={{ display: { lg: 'block', md: 'block', sm: 'none', xs: 'none' }, my: 'auto' }}
+                color="initial"
+              >
+                J&P Globe Trade
+              </Typography>
+            </Stack>
+            {/* <Link href="/" target="_blank" rel="noopener">
               <Label
                 color="info"
                 sx={{
@@ -79,9 +86,9 @@ export default function Header({ headerOnDark }) {
                   position: 'absolute',
                 }}
               >
-                v2.1.0
+                SP. Z O.O
               </Label>
-            </Link>
+            </Link> */}
           </Box>
 
           {mdUp && <NavDesktop data={navConfig} />}
@@ -89,21 +96,15 @@ export default function Header({ headerOnDark }) {
           <Stack spacing={2} direction="row" alignItems="center" justifyContent="flex-end">
             <Stack spacing={1} direction="row" alignItems="center">
               <Searchbar />
-
-              <SettingsButton />
+              <BaseOptions
+                selected={settings.themeMode === 'dark'}
+                onClick={() =>
+                  settings.onUpdate('themeMode', settings.themeMode === 'dark' ? 'light' : 'dark')
+                }
+                icons={['carbon:asleep', 'carbon:asleep-filled']}
+              />
+              {/* <SettingsButton /> */}
             </Stack>
-
-            {mdUp && (
-              <Button
-                variant="contained"
-                color="inherit"
-                href={paths.zoneStore}
-                target="_blank"
-                rel="noopener"
-              >
-                Buy Now
-              </Button>
-            )}
           </Stack>
 
           {!mdUp && <NavMobile data={navConfig} />}

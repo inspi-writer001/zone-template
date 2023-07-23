@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { ScrollLink } from 'react-scroll';
 
 import Stack from '@mui/material/Stack';
 
@@ -17,6 +19,7 @@ export default function NavDesktop({ data, sx }) {
         ...sx,
       }}
     >
+      
       {data.map((link) => (
         <NavList key={link.title} item={link} />
       ))}

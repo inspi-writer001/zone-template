@@ -1,3 +1,6 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { Element } from 'react-scroll';
+
 import {
   _jobs,
   _careerPosts,
@@ -16,10 +19,10 @@ import CareerLandingStep from '../landing/career-landing-step';
 import CareerTestimonial from '../testimonial/career-testimonial';
 import CareerLatestPosts from '../../blog/career/career-latest-posts';
 import CareerLandingConnections from '../landing/career-landing-connections';
-import CareerLandingFeaturedJobs from '../landing/career-landing-featured-jobs';
 import CareerLandingTopCompanies from '../landing/career-landing-top-companies';
-import CareerLandingHotCategories from '../landing/career-landing-hot-categories';
+import CareerLandingFeaturedJobs from '../landing/career-landing-featured-jobs';
 import CareerLandingForRecruiters from '../landing/career-landing-for-recruiters';
+import CareerLandingHotCategories from '../landing/career-landing-hot-categories';
 
 // ----------------------------------------------------------------------
 
@@ -31,8 +34,9 @@ export default function CareerLandingView() {
       <CareerLandingStep />
 
       <CareerLandingFeaturedJobs jobs={_jobs.slice(-6)} />
-
-      <CareerLandingTopCompanies companies={_jobsByCompanies} />
+      <Element name="about">
+        <CareerLandingTopCompanies companies={_jobsByCompanies} />
+      </Element>
 
       <CareerLandingHotCategories categories={_jobsByCategories} />
 

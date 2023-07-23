@@ -33,76 +33,6 @@ export default function CareerLandingHero() {
     filterLocation: null,
   });
 
-  const handleChangeKeyword = useCallback(
-    (newValue) => {
-      setFilters({
-        ...filters,
-        filterKeyword: newValue,
-      });
-    },
-    [filters]
-  );
-
-  const handleChangeLocation = useCallback(
-    (newValue) => {
-      setFilters({
-        ...filters,
-        filterLocation: newValue,
-      });
-    },
-    [filters]
-  );
-
-  const renderFilters = (
-    <Stack
-      spacing={{ xs: 1, md: 0 }}
-      direction={{ xs: 'column', md: 'row' }}
-      sx={{
-        p: 1,
-        borderRadius: 1,
-        bgcolor: 'common.white',
-        alignItems: { md: 'center' },
-        justifyContent: { md: 'center' },
-      }}
-    >
-      <FilterKeyword
-        filterKeyword={filters.filterKeyword}
-        onChangeKeyword={handleChangeKeyword}
-        sx={{
-          bgcolor: 'transparent',
-          [`&:hover, &.${inputClasses.focused}`]: {
-            bgcolor: 'transparent',
-          },
-        }}
-      />
-
-      {mdUp && <Divider orientation="vertical" sx={{ height: 24 }} />}
-
-      <FilterLocation
-        filterLocation={filters.filterLocation}
-        onChangeLocation={handleChangeLocation}
-        sx={{
-          bgcolor: 'transparent',
-          [`&:hover, &.${inputClasses.focused}`]: {
-            bgcolor: 'transparent',
-          },
-        }}
-      />
-
-      <Button
-        size="large"
-        variant="contained"
-        color="primary"
-        sx={{
-          px: 0,
-          minWidth: { xs: 1, md: 48 },
-        }}
-      >
-        <Iconify icon="carbon:search" width={24} />
-      </Button>
-    </Stack>
-  );
-
   const renderSummary = (
     <Stack
       spacing={3}
@@ -205,7 +135,7 @@ export default function CareerLandingHero() {
     >
       <Container>
         <Grid container spacing={3} justifyContent="space-between">
-          <Grid xs={12} md={6} lg={5}>
+          <Grid xs={12} md={6} lg={6}>
             <Stack
               spacing={5}
               sx={{
@@ -214,11 +144,10 @@ export default function CareerLandingHero() {
             >
               <Stack spacing={3}>
                 <Typography variant="h1" sx={{ color: 'common.white' }}>
-                  Get The
-                  <Box component="span" sx={{ color: 'primary.main' }}>
-                    {` Career `}
-                  </Box>
-                  You Deserve
+                  Welcome to
+                </Typography>
+                <Typography variant="h1" sx={{ color: '#F19020' }}>
+                  J & P Globe Trade
                 </Typography>
 
                 <Typography sx={{ color: 'grey.500' }}>
@@ -226,8 +155,6 @@ export default function CareerLandingHero() {
                   venenatis ante odio sit amet eros.
                 </Typography>
               </Stack>
-
-              {renderFilters}
 
               {renderBrands}
 

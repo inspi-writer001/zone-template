@@ -14,7 +14,7 @@ const PostPage = lazy(() => import('src/pages/career/post'));
 
 export const careerRoutes = [
   {
-    path: 'career',
+    path: '/',
     children: [
       { element: <LandingPage />, index: true },
       { path: 'jobs', element: <JobsPage /> },
