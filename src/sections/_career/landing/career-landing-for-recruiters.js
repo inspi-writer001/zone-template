@@ -55,7 +55,7 @@ export default function CareerLandingForRecruiters() {
               color="primary"
               startIcon={<Iconify icon="carbon:document" />}
             >
-              Post a Job
+              Upload Your CV
             </Button>
           </Grid>
 

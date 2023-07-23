@@ -109,10 +109,9 @@ export const pageLinks = [
 
 export const navConfig = [
   { title: 'Home', path: '/' },
-  { title: 'About', path: '#about' },
-  { title: 'Projects', path: '#projects' },
-  { title: 'Upload Cv', path: '#cv' },
-  { title: 'Testimonails', path: '#testimonial' },
+  { title: 'About', path: 'about' },
+  { title: 'Projects', path: 'projects' },
+  { title: 'Upload Cv', path: 'cv' },
 
   /* {
     title: 'Pages',

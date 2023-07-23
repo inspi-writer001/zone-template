@@ -33,24 +33,13 @@ export default function CareerLandingView() {
 
       <CareerLandingStep />
 
-      <CareerLandingFeaturedJobs jobs={_jobs.slice(-6)} />
-      <Element name="about">
-        <CareerLandingTopCompanies companies={_jobsByCompanies} />
-      </Element>
-
-      <CareerLandingHotCategories categories={_jobsByCategories} />
-
-      <CareerLandingConnections countries={_jobsByCountries} />
-
       <CareerLandingForRecruiters />
 
       <CareerTestimonial testimonials={_testimonials} />
 
       <CareerOurClients brands={_brandsColor} />
 
-      <CareerLatestPosts posts={_careerPosts.slice(0, 5)} />
 
-      <CareerDownloadApp />
 
       <CareerNewsletter />
     </>
