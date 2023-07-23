@@ -32,11 +32,11 @@ export default function CareerLandingView() {
       <CareerLandingHero />
 
       <CareerLandingStep />
-      <Element name="about">
-        <CareerLandingFeaturedJobs jobs={_jobs.slice(-6)} />
-      </Element>
 
-      <CareerLandingTopCompanies companies={_jobsByCompanies} />
+      <CareerLandingFeaturedJobs jobs={_jobs.slice(-6)} />
+      <Element name="about">
+        <CareerLandingTopCompanies companies={_jobsByCompanies} />
+      </Element>
 
       <CareerLandingHotCategories categories={_jobsByCategories} />
 
