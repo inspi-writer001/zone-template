@@ -8,7 +8,7 @@ export default function CareerLandingPage() {
   return (
     <>
       <Helmet>
-        <title>Landing</title>
+        <title>J & P Globe Trade</title>
       </Helmet>
 
       <CareerLandingView />

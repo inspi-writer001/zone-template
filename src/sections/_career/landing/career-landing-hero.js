@@ -135,7 +135,7 @@ export default function CareerLandingHero() {
     >
       <Container>
         <Grid container spacing={3} justifyContent="space-between">
-          <Grid xs={12} md={6} lg={5}>
+          <Grid xs={12} md={6} lg={6}>
             <Stack
               spacing={5}
               sx={{
@@ -145,10 +145,9 @@ export default function CareerLandingHero() {
               <Stack spacing={3}>
                 <Typography variant="h1" sx={{ color: 'common.white' }}>
                   Welcome to
-                  <Box component="span" sx={{ color: 'primary.main' }}>
-                    {` Jb `}
-                  </Box>
-                  Construction
+                </Typography>
+                <Typography variant="h1" sx={{ color: '#F19020' }}>
+                  J & P Globe Trade
                 </Typography>
 
                 <Typography sx={{ color: 'grey.500' }}>
