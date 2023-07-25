@@ -22,7 +22,7 @@ export default function CareerLandingForRecruiters() {
       sx={{
         ...bgGradient({
           color: alpha(theme.palette.grey[900], 0.8),
-          imgUrl: '/assets/background/overlay_2.jpg',
+          imgUrl: '/assets/background/bg.avif',
         }),
         py: 10,
       }}
@@ -39,10 +39,10 @@ export default function CareerLandingForRecruiters() {
             }}
           >
             <Typography variant="overline" sx={{ color: 'primary.main', mb: 2, display: 'block' }}>
-              FOR RECRUITERS
+              JOB OFFERS
             </Typography>
 
-            <Typography variant="h2">Do You Have A Position To Post Job? </Typography>
+            <Typography variant="h2">Do You want to Join Us? </Typography>
 
             <Typography sx={{ mt: 3, mb: 5, opacity: 0.72 }}>
               Donec mi odio, faucibus at, scelerisque quis, convallis in, nisi. Morbi mattis

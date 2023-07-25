@@ -16,6 +16,7 @@ import CareerOurClients from '../career-our-clients';
 import CareerDownloadApp from '../career-download-app';
 import CareerLandingHero from '../landing/career-landing-hero';
 import CareerLandingStep from '../landing/career-landing-step';
+import CareerLandingAbout from '../landing/career-landing-about';
 import CareerTestimonial from '../testimonial/career-testimonial';
 import CareerLatestPosts from '../../blog/career/career-latest-posts';
 import CareerLandingConnections from '../landing/career-landing-connections';
@@ -31,15 +32,13 @@ export default function CareerLandingView() {
     <>
       <CareerLandingHero />
 
-      <CareerLandingStep />
+      <CareerLandingAbout />
 
       <CareerLandingForRecruiters />
 
       <CareerTestimonial testimonials={_testimonials} />
 
       <CareerOurClients brands={_brandsColor} />
-
-
 
       <CareerNewsletter />
     </>

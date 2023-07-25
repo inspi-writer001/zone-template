@@ -122,7 +122,7 @@ export default function CareerLandingHero() {
       sx={{
         ...bgGradient({
           color: alpha(theme.palette.grey[900], 0.8),
-          imgUrl: '/assets/background/overlay_2.jpg',
+          imgUrl: '/assets/background/bg.avif',
         }),
         pt: 15,
         overflow: 'hidden',
@@ -143,17 +143,23 @@ export default function CareerLandingHero() {
               }}
             >
               <Stack spacing={3}>
-                <Typography variant="h1" sx={{ color: 'common.white' }}>
-                  Welcome to
+                <Typography variant="h2" sx={{ color: 'common.white' }}>
+                  We Build Your Dream
                 </Typography>
-                <Typography variant="h1" sx={{ color: '#F19020' }}>
-                  J & P Globe Trade
+                <Typography variant="h1" sx={{ color: '#F19020', mt: 0 }}>
+                  With Passion
                 </Typography>
 
                 <Typography sx={{ color: 'grey.500' }}>
-                  Etiam sollicitudin, ipsum eu pulvinar rutrum, tellus ipsum laoreet sapien, quis
-                  venenatis ante odio sit amet eros.
+                  Keep the whole family comfortaable with building construction. We provide 24/7
+                  emergency support
                 </Typography>
+                <Button
+                  variant="contained"
+                  sx={{ borderRadius: '20px', color: '#fff', backgroundColor: '#F19020' }}
+                >
+                  Get Started Now
+                </Button>
               </Stack>
 
               {renderBrands}
