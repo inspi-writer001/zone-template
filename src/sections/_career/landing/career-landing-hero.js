@@ -146,7 +146,7 @@ export default function CareerLandingHero() {
                 <Typography variant="h2" sx={{ color: 'common.white' }}>
                   We Build Your Dream
                 </Typography>
-                <Typography variant="h1" sx={{ color: '#F19020', mt: 0 }}>
+                <Typography variant="h1" sx={{ color: 'primary', mt: 0 }}>
                   With Passion
                 </Typography>
 

@@ -91,7 +91,6 @@ export default function Header({ headerOnDark }) {
             </Link> */}
           </Box>
 
-
           {mdUp && <NavDesktop data={careerRoutes[0].children} />}
 
           <Stack spacing={2} direction="row" alignItems="center" justifyContent="flex-end">
