@@ -154,11 +154,8 @@ export default function CareerLandingHero() {
                   Keep the whole family comfortaable with building construction. We provide 24/7
                   emergency support
                 </Typography>
-                <Button
-                  variant="contained"
-                  sx={{ borderRadius: '20px', color: '#fff', backgroundColor: '#F19020' }}
-                >
-                  Get Started Now
+                <Button fullWidth variant="contained" size="large" color="primary">
+                  Get Started
                 </Button>
               </Stack>
 

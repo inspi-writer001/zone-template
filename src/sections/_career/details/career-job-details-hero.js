@@ -32,7 +32,7 @@ export default function CareerJobDetailsHero({ job }) {
       sx={{
         ...bgGradient({
           color: alpha(theme.palette.grey[900], 0.8),
-          imgUrl: '/assets/background/overlay_2.jpg',
+          imgUrl: '/assets/background/bg.avif',
         }),
         pt: 5,
         pb: 10,

@@ -1,5 +1,7 @@
 import { lazy } from 'react';
 
+import CareerProjects from 'src/sections/_career/landing/career-landing-projects';
+
 // ----------------------------------------------------------------------
 
 const AboutPage = lazy(() => import('src/pages/career/about'));
@@ -16,13 +18,14 @@ export const careerRoutes = [
   {
     path: '/',
     children: [
-      { element: <LandingPage />, index: true },
-      { path: 'jobs', element: <JobsPage /> },
-      { path: 'job', element: <JobPage /> },
-      { path: 'posts', element: <BlogPage /> },
-      { path: 'post', element: <PostPage /> },
-      { path: 'about', element: <AboutPage /> },
-      { path: 'contact', element: <ContactPage /> },
+      { title: 'Home', path: '/', element: <LandingPage />, index: true },
+      /* { title: 'Job', path: 'jobs', element: <JobsPage /> }, */
+      { title: 'Projects', path: 'projects', element: <CareerProjects /> },
+      { title: 'Job', path: 'job', element: <JobPage /> },
+      { title: 'Blog', path: 'posts', element: <BlogPage /> },
+      /* { title: 'Post', path: 'post', element: <PostPage /> }, */
+      { title: 'About', path: 'about', element: <AboutPage /> },
+      { title: 'Contact', path: 'contact', element: <ContactPage /> },
     ],
   },
 ];

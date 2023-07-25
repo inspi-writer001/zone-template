@@ -16,11 +16,11 @@ import { useSettingsContext } from 'src/components/settings';
 import { HEADER } from '../config-layout';
 import Searchbar from '../common/searchbar';
 import HeaderShadow from '../common/header-shadow';
+import { careerRoutes } from '../../routes/sections/career';
 import BaseOptions from '../../components/settings/drawer/base-options';
 
 import NavMobile from './nav/mobile';
 import NavDesktop from './nav/desktop';
-import { navConfig } from './config-navigation';
 
 // ----------------------------------------------------------------------
 
@@ -91,7 +91,8 @@ export default function Header({ headerOnDark }) {
             </Link> */}
           </Box>
 
-          {mdUp && <NavDesktop data={navConfig} />}
+
+          {mdUp && <NavDesktop data={careerRoutes[0].children} />}
 
           <Stack spacing={2} direction="row" alignItems="center" justifyContent="flex-end">
             <Stack spacing={1} direction="row" alignItems="center">
@@ -107,7 +108,7 @@ export default function Header({ headerOnDark }) {
             </Stack>
           </Stack>
 
-          {!mdUp && <NavMobile data={navConfig} />}
+          {!mdUp && <NavMobile data={careerRoutes[0].children} />}
         </Container>
       </Toolbar>
 

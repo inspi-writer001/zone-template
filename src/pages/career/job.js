@@ -8,7 +8,7 @@ export default function CareerJobPage() {
   return (
     <>
       <Helmet>
-        <title>Marketing Coordinator</title>
+        <title>J & P Globe</title>
       </Helmet>
 
       <CareerJobView />
