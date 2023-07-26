@@ -16,103 +16,126 @@ import Iconify from 'src/components/iconify';
 import { fDate } from 'src/utils/format-time';
 import CustomBreadcrumbs from 'src/components/custom-breadcrumbs';
 
+import CareerJobModal from '../view/career-job-modal';
+
 // ----------------------------------------------------------------------
 
 export default function CareerJobDetailsHero({ job }) {
   const theme = useTheme();
 
   const [favorite, setFavorite] = useState(job.favorited);
+  const [openForm, setOpenForm] = useState(false);
 
   const handleChangeFavorite = useCallback((event) => {
     setFavorite(event.target.checked);
   }, []);
 
+  const [open, setOpen] = useState(true);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
-    <Box
-      sx={{
-        ...bgGradient({
-          color: alpha(theme.palette.grey[900], 0.8),
-          imgUrl: '/assets/background/bg.avif',
-        }),
-        pt: 5,
-        pb: 10,
-      }}
-    >
-      <Container>
-        <CustomBreadcrumbs
-          links={[
-            { name: 'Home', href: '/' },
-            { name: 'Jobs', href: paths.career.jobs },
-            { name: job.slug },
-          ]}
-          sx={{
-            mb: { xs: 5, md: 8 },
-            '& a': {
-              color: 'common.white',
-            },
-          }}
-        />
+    <>
+      {openForm && <CareerJobModal open={open} onClose={handleClose} />}
 
-        <Stack
-          spacing={5}
-          direction={{ xs: 'column', md: 'row' }}
-          justifyContent={{ md: 'space-between' }}
-        >
-          <Stack spacing={{ xs: 3, md: 2 }} sx={{ color: 'common.white' }}>
-            <Typography variant="h3" component="h1">
-              {job.slug}
-            </Typography>
-
-            <Stack spacing={3} direction={{ xs: 'column', md: 'row' }} sx={{ opacity: 0.48 }}>
-              <Stack direction="row" alignItems="center" sx={{ typography: 'body2' }}>
-                <Iconify icon="carbon:baggage-claim" sx={{ mr: 1 }} />
-                <Link color="inherit" underline="always">
-                  {job.category}
-                </Link>
-              </Stack>
-
-              <Stack direction="row" alignItems="center" sx={{ typography: 'body2' }}>
-                <Iconify icon="carbon:view" sx={{ mr: 1 }} /> {`${job.totalViews} views`}
-              </Stack>
-
-              <Stack direction="row" alignItems="center" sx={{ typography: 'body2' }}>
-                <Iconify icon="carbon:location" sx={{ mr: 1 }} /> {job.location}
-              </Stack>
-            </Stack>
-          </Stack>
+      <Box
+        sx={{
+          ...bgGradient({
+            color: alpha(theme.palette.grey[900], 0.8),
+            imgUrl: '/assets/background/bg.avif',
+          }),
+          pt: 5,
+          pb: 10,
+        }}
+      >
+        <Container>
+          <CustomBreadcrumbs
+            links={[
+              { name: 'Home', href: '/' },
+              { name: 'Jobs', href: paths.career.jobs },
+              { name: job.slug },
+            ]}
+            sx={{
+              mb: { xs: 5, md: 8 },
+              '& a': {
+                color: 'common.white',
+              },
+            }}
+          />
 
           <Stack
-            spacing={2}
-            direction="row"
-            alignItems="flex-start"
-            sx={{ width: 1, maxWidth: 340 }}
+            spacing={5}
+            direction={{ xs: 'column', md: 'row' }}
+            justifyContent={{ md: 'space-between' }}
           >
-            <Stack spacing={2} alignItems="center" sx={{ width: 1 }}>
-              <Button fullWidth variant="contained" size="large" color="primary">
-                Apply Now
-              </Button>
-
-              <Typography variant="body2" sx={{ color: 'common.white' }}>
-                {`Expiration date: `}
-                <Box component="span" sx={{ color: 'primary.main' }}>
-                  {fDate(job.deadline)}
-                </Box>
+            <Stack spacing={{ xs: 3, md: 2 }} sx={{ color: 'common.white' }}>
+              <Typography variant="h3" component="h1">
+                {job.slug}
               </Typography>
+
+              <Stack spacing={3} direction={{ xs: 'column', md: 'row' }} sx={{ opacity: 0.48 }}>
+                <Stack direction="row" alignItems="center" sx={{ typography: 'body2' }}>
+                  <Iconify icon="carbon:baggage-claim" sx={{ mr: 1 }} />
+                  <Link color="inherit" underline="always">
+                    {job.category}
+                  </Link>
+                </Stack>
+
+                <Stack direction="row" alignItems="center" sx={{ typography: 'body2' }}>
+                  <Iconify icon="carbon:view" sx={{ mr: 1 }} /> {`${job.totalViews} views`}
+                </Stack>
+
+                <Stack direction="row" alignItems="center" sx={{ typography: 'body2' }}>
+                  <Iconify icon="carbon:location" sx={{ mr: 1 }} /> {job.location}
+                </Stack>
+              </Stack>
             </Stack>
 
-            <Box sx={{ pt: 0.75 }}>
-              <Checkbox
-                color="error"
-                checked={favorite}
-                onChange={handleChangeFavorite}
-                icon={<Iconify icon="carbon:favorite" width={24} />}
-                checkedIcon={<Iconify icon="carbon:favorite-filled" width={24} />}
-              />
-            </Box>
+            <Stack
+              spacing={2}
+              direction="row"
+              alignItems="flex-start"
+              sx={{ width: 1, maxWidth: 340 }}
+            >
+              <Stack spacing={2} alignItems="center" sx={{ width: 1 }}>
+                <Button
+                  fullWidth
+                  variant="contained"
+                  onClick={() => setOpenForm(true)}
+                  size="large"
+                  color="primary"
+                >
+                  Apply Now
+                </Button>
+
+                <Typography variant="body2" sx={{ color: 'common.white' }}>
+                  {`Expiration date: `}
+                  <Box component="span" sx={{ color: 'primary.main' }}>
+                    {fDate(job.deadline)}
+                  </Box>
+                </Typography>
+              </Stack>
+
+              <Box sx={{ pt: 0.75 }}>
+                <Checkbox
+                  color="error"
+                  checked={favorite}
+                  onChange={handleChangeFavorite}
+                  icon={<Iconify icon="carbon:favorite" width={24} />}
+                  checkedIcon={<Iconify icon="carbon:favorite-filled" width={24} />}
+                />
+              </Box>
+            </Stack>
           </Stack>
-        </Stack>
-      </Container>
-    </Box>
+        </Container>
+      </Box>
+    </>
   );
 }
 

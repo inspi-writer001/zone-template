@@ -101,9 +101,7 @@ export default function CareerJobView() {
             <Stack spacing={5}>
               {mdUp && <CareerJobDetailsInfo job={_mockJob} />}
 
-              <CareerJobDetailsCompanyInfo job={_mockJob} />
 
-              <CareerJobDetailsCompanySimilar jobs={_jobs.slice(-3)} />
 
               <Advertisement
                 advertisement={{
@@ -118,7 +116,7 @@ export default function CareerJobView() {
         </Grid>
       </Container>
 
-      <CareerJobListSimilar jobs={_jobs.slice(-3)} />
+
 
       <CareerNewsletter />
     </>
