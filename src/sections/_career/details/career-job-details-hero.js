@@ -16,7 +16,8 @@ import Iconify from 'src/components/iconify';
 import { fDate } from 'src/utils/format-time';
 import CustomBreadcrumbs from 'src/components/custom-breadcrumbs';
 
-import CareerJobModal from '../view/career-job-modal';
+// eslint-disable-next-line import/no-unresolved
+import CareerJobModal from './career-job-modal';
 
 // ----------------------------------------------------------------------
 
