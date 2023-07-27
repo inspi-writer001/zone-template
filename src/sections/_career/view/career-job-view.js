@@ -66,15 +66,11 @@ export default function CareerJobView() {
             <CareerJobDetailsSummary job={_mockJob} />
 
             <Divider sx={{ my: 5 }} />
-
-            
           </Grid>
 
           <Grid xs={12} md={5} lg={4}>
             <Stack spacing={5}>
               {mdUp && <CareerJobDetailsInfo job={_mockJob} />}
-
-
 
               <Advertisement
                 advertisement={{
@@ -88,8 +84,6 @@ export default function CareerJobView() {
           </Grid>
         </Grid>
       </Container>
-
-
 
       <CareerNewsletter />
     </>

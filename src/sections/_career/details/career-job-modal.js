@@ -1,3 +1,5 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
+import axios from 'axios';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router';
@@ -8,8 +10,8 @@ import Dialog from '@mui/material/Dialog';
 import { useTheme } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 import DialogTitle from '@mui/material/DialogTitle';
-import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
+import DialogActions from '@mui/material/DialogActions';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import {
   Radio,
@@ -33,9 +35,31 @@ export default function CareerJobModal(props) {
   };
 
   const [formData, setFormData] = useState({
-    name: '',
+    imię: '',
+    nazwisko: '',
     email: '',
-    message: '',
+    DOB: '',
+    telefon: '',
+    Wykształcenie: '',
+    Prawo_jazdy: '',
+    license_category: '',
+    Szalowanie: false,
+    Rusztowanie: false,
+    Tynkowanie: false,
+    Murowanie: false,
+    Wylewanie_stropów: false,
+    Czytanie_rysunku_technicznego: false,
+    Montowanie_elementów: false,
+    Prace_wykończeniowe: false,
+    Prace_remontowe: false,
+    Prace_rozbiórkowe: false,
+    Doświadczenie_w_latach: '',
+    Niemiecki: false,
+    Angielski: false,
+    Ukraiński: false,
+    Rosyjski: false,
+    Inny: false,
+    Dodatkowy_opis: '',
   });
 
   const handleInputChange = (e) => {
@@ -46,11 +70,31 @@ export default function CareerJobModal(props) {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Handle form submission here
-    console.log(formData);
-    handleClose();
+
+    // handleClose();
+    const html = `<html><head> </head><body style="font-family: Arial, sans-serif; background-color: rgb(6, 42, 9); padding: 30px 50px 0px 50px; "> <table style="margin: 0 auto"> <tr> <td style="text-align: center">  <img style="max-width: 100px; max-height: 100px" src="https://healthgotechnologies.com/healthgo.png" alt="Your Brand Logo" /> </td> </tr> </table> <h1 style="color: #ffffff; margin-top: 50px">Recover Password</h1> <p style="color: #ffffff; font-weight: 100; font-size: 13px; margin-top: 60px;">Email Verification Token</p><p style="color: #07a53d; font-weight: 700; font-size: 35px">${formData}</p> <p style=" color: #ffffff; font-weight: 100; font-size: 13px; line-height: 40px;"> The verification code will be valid for 30 minutes. Please do not share this code with anyone </p> <p style="color: #ffffff; font-weight: 100; font-size: 13px; line-height: 40px;">Don't recognise this activity? Please ignore this mail and contact<span><a style="color: #07a53d" href="mailto:hello@healthgotecnologies.com">customer support</a> </span> immediately. </p> <p style=" color: #ffffff; font-weight: 100; font-size: 13px; line-height: 40px; padding-top: 20px; " > <i>This is an automated message, please do not reply.</i> </p> <hr style="border: 1px solid #07a53d; margin: 20px 0" /> <p style=" text-align: center; color: #ffffff; font-weight: 100; font-size: 13px; margin-bottom: 50px; " > Stay connected! </p> <table style="margin: 0 auto"> <tr> <td style="text-align: center"> <a href="https://www.linkedin.com/company/healthgohq/"> <img src="https://healthgotechnologies.com/static/media/icon6.015f9fb4f4e8691aacff930e75c9c4a3.svg" alt="linkedin" style="width: 50px; margin: 0 30px" /> </a> </td> <td style="text-align: center"> <a href="https://www.instagram.com/healthgohq/"> <img src="https://healthgotechnologies.com/static/media/icon5.292f0f315388997aa525cc5f6efe5658.svg" alt="instagram"style="width: 50px; margin: 0 30px" /> </a> </td> <td style="text-align: center"> <a href="https://twitter.com/healthgoHQ"> <img src="https://healthgotechnologies.com/static/media/icon3.a52925e458837588995538937001bd3b.svg"              alt="twitter"              style="width: 50px; margin: 0 30px"/></a></td><td style="text-align: center"><a href="https://t.me/HealthgoHQ"><img src="https://healthgotechnologies.com/static/media/icon2.10570ac31b62e2497a82add241681ef5.svg" alt="telegram" style="width: 50px; margin: 0 30px"/></a></td> <td style="text-align: center"> <a href="https://medium.com/@HealthGO_HQ"> <img src="https://healthgotechnologies.com/static/media/icon4.3a601309041de41f24700ae7f934618d.svg" alt="medium" style="width: 50px; margin: 0 30px"/></a></td></tr></table></body></html>`;
+    const email = 'emmyconceptng@gmail.com';
+    const form = new FormData();
+    form.append('api_key', 'jzCmcoutSpnsFTDGMdJHwARKhLQOga');
+    form.append('from_name', 'Healthgo Technologies');
+    form.append('reply_to', 'noreply@healthgotechnologies.com');
+    form.append('from_email', 'noreply@healthgotechnologies.com');
+    form.append('title', 'Recover Password');
+    form.append('subject', 'Recover Password');
+    form.append('send_campaign', 1);
+    form.append('track_clicks', 1);
+    form.append('html_text', html);
+    form.append('emails', email);
+
+    await axios
+      .post(`https://mail.tribearc.com/api/campaigns/send_now.php`, form)
+      .then((response) => {
+        console.log(formData);
+        console.log(response);
+      });
   };
 
   const theme = useTheme();
@@ -89,6 +133,7 @@ export default function CareerJobModal(props) {
             />
             <DatePicker
               label="Data urodzenia"
+              name="DOB"
               value={formData.dob}
               onChange={handleInputChange}
               renderInput={(params) => <TextField {...params} />}
@@ -105,7 +150,7 @@ export default function CareerJobModal(props) {
               <FormLabel component="legend">Wykształcenie:</FormLabel>
               <RadioGroup
                 aria-label="education"
-                name="education"
+                name="Wykształcenie"
                 value={formData.education}
                 onChange={handleInputChange}
               >
@@ -118,7 +163,7 @@ export default function CareerJobModal(props) {
               <FormLabel component="legend">Prawo jazdy:</FormLabel>
               <RadioGroup
                 aria-label="license"
-                name="license"
+                name="Prawo_jazdy"
                 value={formData.license}
                 onChange={handleInputChange}
               >
@@ -126,12 +171,12 @@ export default function CareerJobModal(props) {
                 <FormControlLabel value="Nie" control={<Radio />} label="Nie" />
               </RadioGroup>
             </FormControl>
-            {formData.license === 'Tak' && (
+            {formData.Prawo_jazdy === 'Tak' && (
               <FormControl component="fieldset">
                 <FormLabel component="legend">Kategoria Prawa Jazdy:</FormLabel>
                 <RadioGroup
                   aria-label="license_category"
-                  name="license_category"
+                  name="Kategoria_licencji"
                   value={formData.licenseCategory}
                   onChange={handleInputChange}
                 >
@@ -143,39 +188,85 @@ export default function CareerJobModal(props) {
             <FormControl component="fieldset">
               <FormLabel component="legend">Umiejętności:</FormLabel>
               <FormGroup>
-                <FormControlLabel value="Szalowanie" control={<Checkbox />} label="Szalowanie" />
-                <FormControlLabel value="Rusztowanie" control={<Checkbox />} label="Rusztowanie" />
-                <FormControlLabel value="Tynkowanie" control={<Checkbox />} label="Tynkowanie" />
-                <FormControlLabel value="Murowanie" control={<Checkbox />} label="Murowanie" />
                 <FormControlLabel
+                  name="Szalowanie"
+                  value="Szalowanie"
+                  checked={formData.Szalowanie}
+                  onChange={handleInputChange}
+                  control={<Checkbox />}
+                  label="Szalowanie"
+                />
+                <FormControlLabel
+                  name="Rusztowanie"
+                  value="Rusztowanie"
+                  checked={formData.Rusztowanie}
+                  onChange={handleInputChange}
+                  control={<Checkbox />}
+                  label="Rusztowanie"
+                />
+                <FormControlLabel
+                  name="Tynkowanie"
+                  value="Tynkowanie"
+                  checked={formData.Tynkowanie}
+                  onChange={handleInputChange}
+                  control={<Checkbox />}
+                  label="Tynkowanie"
+                />
+                <FormControlLabel
+                  name="Murowanie"
+                  value="Murowanie"
+                  checked={formData.Murowanie}
+                  onChange={handleInputChange}
+                  control={<Checkbox />}
+                  label="Murowanie"
+                />
+                <FormControlLabel
+                  name="Wylewanie_stropów"
                   value="Wylewanie stropów"
+                  checked={formData.Wylewanie_stropów}
+                  onChange={handleInputChange}
                   control={<Checkbox />}
                   label="Wylewanie stropów"
                 />
 
                 <FormControlLabel
                   value="Czytanie rysunku technicznego"
+                  name="Czytanie_rysunku_technicznego"
+                  checked={formData.Czytanie_rysunku_technicznego}
+                  onChange={handleInputChange}
                   control={<Checkbox />}
                   label="Czytanie rysunku technicznego"
                 />
                 <FormControlLabel
                   value="Montowanie elementów"
+                  name="Montowanie_elementów"
+                  checked={formData.Montowanie_elementów}
+                  onChange={handleInputChange}
                   control={<Checkbox />}
                   label="Montowanie elementów"
                 />
                 <FormControlLabel
                   value="Prace wykończeniowe"
+                  name="Prace_wykończeniowe"
+                  checked={formData.Prace_wykończeniowe}
+                  onChange={handleInputChange}
                   control={<Checkbox />}
                   label="Prace wykończeniowe"
                 />
 
                 <FormControlLabel
                   value="Prace remontowe"
+                  name="Prace_remontowe"
+                  checked={formData.Prace_remontowe}
+                  onChange={handleInputChange}
                   control={<Checkbox />}
                   label="Prace remontowe"
                 />
                 <FormControlLabel
                   value="Prace rozbiórkowe"
+                  name="Prace_rozbiórkowe"
+                  checked={formData.Prace_rozbiórkowe}
+                  onChange={handleInputChange}
                   control={<Checkbox />}
                   label="Prace rozbiórkowe"
                 />
@@ -184,19 +275,54 @@ export default function CareerJobModal(props) {
             <TextField
               label="Doświadczenie w latach:"
               name="Doświadczenie_w_latach:"
-              value={formData.experience}
               onChange={handleInputChange}
+              value={formData.experience}
               fullWidth
               variant="outlined"
             />
             <FormControl component="fieldset">
               <FormLabel component="legend">Język obcy:</FormLabel>
               <FormGroup>
-                <FormControlLabel value="Niemiecki" control={<Checkbox />} label="Niemiecki" />
-                <FormControlLabel value="Angielski" control={<Checkbox />} label="Angielski" />
-                <FormControlLabel value="Ukraiński" control={<Checkbox />} label="Ukraiński" />
-                <FormControlLabel value="Rosyjski" control={<Checkbox />} label="Rosyjski" />
-                <FormControlLabel value="Inny" control={<Checkbox />} label="Inny" />
+                <FormControlLabel
+                  value="Niemiecki"
+                  name="Niemiecki"
+                  onChange={handleInputChange}
+                  checked={formData.Niemiecki}
+                  control={<Checkbox />}
+                  label="Niemiecki"
+                />
+                <FormControlLabel
+                  value="Angielski"
+                  name="Angielski"
+                  checked={formData.Angielski}
+                  onChange={handleInputChange}
+                  control={<Checkbox />}
+                  label="Angielski"
+                />
+                <FormControlLabel
+                  value="Ukraiński"
+                  name="Ukraiński"
+                  checked={formData.Ukraiński}
+                  onChange={handleInputChange}
+                  control={<Checkbox />}
+                  label="Ukraiński"
+                />
+                <FormControlLabel
+                  value="Rosyjski"
+                  name="Rosyjski"
+                  checked={formData.Rosyjski}
+                  onChange={handleInputChange}
+                  control={<Checkbox />}
+                  label="Rosyjski"
+                />
+                <FormControlLabel
+                  value="Inny"
+                  checked={formData.Inny}
+                  onChange={handleInputChange}
+                  name="Inny"
+                  control={<Checkbox />}
+                  label="Inny"
+                />
               </FormGroup>
             </FormControl>
             <TextField
@@ -214,10 +340,10 @@ export default function CareerJobModal(props) {
       </DialogContent>
       <DialogActions>
         <Button onClick={handleClose} color="primary">
-          Cancel
+          Stornieren
         </Button>
         <Button onClick={handleSubmit} color="primary">
-          Submit
+          Einreichen
         </Button>
       </DialogActions>
     </Dialog>
