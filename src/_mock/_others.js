@@ -20,7 +20,7 @@ export const _testimonials = [...Array(8)].map((_, index) => ({
   createdAt: _mock.time(index),
   ratingNumber: 5,
   review:
-    'Amazing experience i love it a lot. Thanks to the team that dreams come true, great! I appreciate there attitude and approach.',
+    'Tolle Erfahrung, ich liebe es sehr. Danke an das Team, das Träume wahr werden lässt, großartig! Ich schätze ihre Einstellung und Herangehensweise.',
 }));
 
 // ----------------------------------------------------------------------
@@ -111,7 +111,7 @@ export const _faqs = [
   id: _mock.id(index),
   question,
   answer:
-    'Amazing experience i love it a lot. Thanks to the team that dreams come true, great! I appreciate there attitude and approach.',
+    'Tolle Erfahrung, ich liebe es sehr. Danke an das Team, das Träume wahr werden lässt, großartig! Ich schätze ihre Einstellung und Herangehensweise.',
 }));
 
 export const _faqsSupport = [
@@ -129,5 +129,5 @@ export const _faqsSupport = [
   id: _mock.id(index),
   question,
   answer:
-    'Amazing experience i love it a lot. Thanks to the team that dreams come true, great! I appreciate there attitude and approach.',
+    'Tolle Erfahrung, ich liebe es sehr. Danke an das Team, das Träume wahr werden lässt, großartig! Ich schätze ihre Einstellung und Herangehensweise.',
 }));

@@ -1,7 +1,9 @@
+import { useNavigate } from 'react-router';
+
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import Container from '@mui/material/Container';
 import Grid from '@mui/material/Unstable_Grid2';
+import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { alpha, useTheme } from '@mui/material/styles';
 
@@ -13,6 +15,7 @@ import { useResponsive } from 'src/hooks/use-responsive';
 // ----------------------------------------------------------------------
 
 export default function CareerLandingForRecruiters() {
+  const navigate = useNavigate();
   const theme = useTheme();
 
   const mdUp = useResponsive('up', 'md');
@@ -39,23 +42,21 @@ export default function CareerLandingForRecruiters() {
             }}
           >
             <Typography variant="overline" sx={{ color: 'primary.main', mb: 2, display: 'block' }}>
-              JOB OFFERS
+              JOBANGEBOTE
             </Typography>
 
-            <Typography variant="h2">Do You want to Join Us? </Typography>
+            <Typography variant="h2">Möchtest du uns beitreten? </Typography>
 
-            <Typography sx={{ mt: 3, mb: 5, opacity: 0.72 }}>
-              Donec mi odio, faucibus at, scelerisque quis, convallis in, nisi. Morbi mattis
-              ullamcorper velit.
-            </Typography>
+            <Typography sx={{ mt: 3, mb: 5, opacity: 0.72 }}>Other Random Description</Typography>
 
             <Button
               variant="contained"
               size="large"
               color="primary"
               startIcon={<Iconify icon="carbon:document" />}
+              onClick={() => navigate('/job')}
             >
-              Upload Your CV
+              Laden Sie Ihren Lebenslauf hoch
             </Button>
           </Grid>
 

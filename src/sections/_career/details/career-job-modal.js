@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router';
 
 import { DatePicker } from '@mui/lab';
 import Button from '@mui/material/Button';
@@ -7,16 +8,27 @@ import Dialog from '@mui/material/Dialog';
 import { useTheme } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 import DialogTitle from '@mui/material/DialogTitle';
-import DialogContent from '@mui/material/DialogContent';
 import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { Stack, Radio, FormLabel, RadioGroup, FormControl, FormControlLabel } from '@mui/material';
+import {
+  Radio,
+  Stack,
+  Checkbox,
+  FormGroup,
+  FormLabel,
+  RadioGroup,
+  FormControl,
+  FormControlLabel,
+} from '@mui/material';
 
 export default function CareerJobModal(props) {
+  const navigate = useNavigate();
   const { open, onClose } = props;
   const handleClose = () => {
     if (onClose) {
       onClose();
+      navigate(0);
     }
   };
 
@@ -130,42 +142,44 @@ export default function CareerJobModal(props) {
             )}
             <FormControl component="fieldset">
               <FormLabel component="legend">Umiejętności:</FormLabel>
-              <RadioGroup
-                aria-label="skills"
-                name="skills"
-                value={formData.skills}
-                onChange={handleInputChange}
-              >
-                <FormControlLabel value="Szalowanie" control={<Radio />} label="Szalowanie" />
-                <FormControlLabel value="Rusztowanie" control={<Radio />} label="Rusztowanie" />
-                <FormControlLabel value="Tynkowanie" control={<Radio />} label="Tynkowanie" />
-                <FormControlLabel value="Murowanie" control={<Radio />} label="Murowanie" />
-                <FormControlLabel value="Wylewanie" control={<Radio />} label="Wylewanie" />
-                <FormControlLabel value="stropów" control={<Radio />} label="stropów" />
+              <FormGroup>
+                <FormControlLabel value="Szalowanie" control={<Checkbox />} label="Szalowanie" />
+                <FormControlLabel value="Rusztowanie" control={<Checkbox />} label="Rusztowanie" />
+                <FormControlLabel value="Tynkowanie" control={<Checkbox />} label="Tynkowanie" />
+                <FormControlLabel value="Murowanie" control={<Checkbox />} label="Murowanie" />
+                <FormControlLabel
+                  value="Wylewanie stropów"
+                  control={<Checkbox />}
+                  label="Wylewanie stropów"
+                />
+
                 <FormControlLabel
                   value="Czytanie rysunku technicznego"
-                  control={<Radio />}
+                  control={<Checkbox />}
                   label="Czytanie rysunku technicznego"
                 />
                 <FormControlLabel
                   value="Montowanie elementów"
-                  control={<Radio />}
+                  control={<Checkbox />}
                   label="Montowanie elementów"
                 />
-                <FormControlLabel value="Prace" control={<Radio />} label="Prace" />
-                <FormControlLabel value="wykończeniowe" control={<Radio />} label="wykończeniowe" />
+                <FormControlLabel
+                  value="Prace wykończeniowe"
+                  control={<Checkbox />}
+                  label="Prace wykończeniowe"
+                />
+
                 <FormControlLabel
                   value="Prace remontowe"
-                  control={<Radio />}
+                  control={<Checkbox />}
                   label="Prace remontowe"
                 />
                 <FormControlLabel
                   value="Prace rozbiórkowe"
-                  control={<Radio />}
+                  control={<Checkbox />}
                   label="Prace rozbiórkowe"
                 />
-                <FormControlLabel value="Umiejetnosci" control={<Radio />} label="Umiejetnosci" />
-              </RadioGroup>
+              </FormGroup>
             </FormControl>
             <TextField
               label="Doświadczenie w latach:"
@@ -177,19 +191,13 @@ export default function CareerJobModal(props) {
             />
             <FormControl component="fieldset">
               <FormLabel component="legend">Język obcy:</FormLabel>
-              <RadioGroup
-                aria-label="foreign_language"
-                name="foreign_language"
-                value={formData.language}
-                onChange={handleInputChange}
-              >
-                <FormControlLabel value="Niemiecki" control={<Radio />} label="Niemiecki" />
-                <FormControlLabel value="Angielski" control={<Radio />} label="Angielski" />
-                <FormControlLabel value="Angielski" control={<Radio />} label="Angielski" />
-                <FormControlLabel value="Ukraiński" control={<Radio />} label="Ukraiński" />
-                <FormControlLabel value="Rosyjski" control={<Radio />} label="Rosyjski" />
-                <FormControlLabel value="Inny" control={<Radio />} label="Inny" />
-              </RadioGroup>
+              <FormGroup>
+                <FormControlLabel value="Niemiecki" control={<Checkbox />} label="Niemiecki" />
+                <FormControlLabel value="Angielski" control={<Checkbox />} label="Angielski" />
+                <FormControlLabel value="Ukraiński" control={<Checkbox />} label="Ukraiński" />
+                <FormControlLabel value="Rosyjski" control={<Checkbox />} label="Rosyjski" />
+                <FormControlLabel value="Inny" control={<Checkbox />} label="Inny" />
+              </FormGroup>
             </FormControl>
             <TextField
               label="Dodatkowy Opis:"

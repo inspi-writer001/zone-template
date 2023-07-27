@@ -37,7 +37,7 @@ export default function CareerTestimonial({ testimonials }) {
         <Grid container spacing={3} justifyContent="center">
           <Grid xs={12} md={6}>
             <Typography variant="h2" sx={{ mb: 5, textAlign: 'center' }}>
-              What Our Customer Say
+              Was unsere Kunden sagen
             </Typography>
 
             <Carousel ref={carousel.carouselRef} {...carousel.carouselSettings}>

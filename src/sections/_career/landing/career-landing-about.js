@@ -39,8 +39,6 @@ export default function CareerLandingAbout() {
         py: { xs: 5, md: 10 },
       }}
     >
-     
-
       <Grid
         container
         columnSpacing={{ xs: 0, md: 3 }}
@@ -55,11 +53,11 @@ export default function CareerLandingAbout() {
           }}
         >
           <Typography component="div" variant="overline" sx={{ color: 'text.disabled' }}>
-            About Us
+            Über uns
           </Typography>
 
           <Typography variant="h2" sx={{ my: 3 }}>
-            Who We Are
+            Wer wir sind
           </Typography>
 
           <Typography sx={{ color: 'text.secondary' }}>
@@ -75,7 +73,7 @@ export default function CareerLandingAbout() {
             endIcon={<Iconify icon="carbon:chevron-right" />}
             sx={{ my: 5 }}
           >
-            Lean more
+            Erfahren Sie mehr
           </Button>
         </Grid>
 

@@ -144,18 +144,18 @@ export default function CareerLandingHero() {
             >
               <Stack spacing={3}>
                 <Typography variant="h2" sx={{ color: 'common.white' }}>
-                  We Build Your Dream
+                  Wir bauen Ihren Traum
                 </Typography>
-                <Typography variant="h1" sx={{ color: 'primary', mt: 0 }}>
-                  With Passion
+                <Typography variant="h1" sx={{ color: '#FA541C', mt: 0 }}>
+                  Mit Leidenschaft
                 </Typography>
 
                 <Typography sx={{ color: 'grey.500' }}>
-                  Keep the whole family comfortaable with building construction. We provide 24/7
-                  emergency support
+                  Sorgen Sie dafür, dass sich die ganze Familie beim Bauen wohlfühlt. Wir bieten
+                  24/7 Notfallunterstützung
                 </Typography>
                 <Button fullWidth variant="contained" size="large" color="primary">
-                  Get Started
+                  Loslegen
                 </Button>
               </Stack>
 
