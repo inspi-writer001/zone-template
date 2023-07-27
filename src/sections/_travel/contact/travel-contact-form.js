@@ -75,22 +75,22 @@ export default function TravelContactForm() {
               textAlign: { xs: 'center', md: 'left' },
             }}
           >
-            <Typography variant="h3">Drop Us A Line</Typography>
+            <Typography variant="h3">Kontaktiere uns</Typography>
 
             <Typography sx={{ color: 'text.secondary' }}>
-              We normally respond within 2 business days
+              Normalerweise antworten wir innerhalb von 24 Stunden
             </Typography>
           </Stack>
 
           <FormProvider methods={methods} onSubmit={onSubmit}>
             <Stack spacing={2.5} alignItems="flex-start">
-              <RHFTextField name="fullName" label="Full name" />
+              <RHFTextField name="fullName" label="Vollständiger Name" />
 
               <RHFTextField name="email" label="Email" />
 
-              <RHFTextField name="subject" label="Subject" />
+              <RHFTextField name="subject" label="Thema" />
 
-              <RHFTextField name="message" multiline rows={4} label="Message" sx={{ pb: 2.5 }} />
+              <RHFTextField name="message" multiline rows={4} label="Nachricht" sx={{ pb: 2.5 }} />
 
               <LoadingButton
                 size="large"
@@ -102,7 +102,7 @@ export default function TravelContactForm() {
                   alignSelf: { xs: 'center', md: 'unset' },
                 }}
               >
-                Send Request
+                Anfrage senden
               </LoadingButton>
             </Stack>
           </FormProvider>

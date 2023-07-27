@@ -46,16 +46,16 @@ export default function CareerLandingHero() {
         divider={<Divider orientation="vertical" flexItem sx={{ borderStyle: 'dashed' }} />}
       >
         <Stack spacing={0.5} sx={{ color: 'common.white', width: { xs: 0.5, md: 'auto' } }}>
-          <Typography variant="h4">{fShortenNumber(2000000)}+</Typography>
+          <Typography variant="h4">{fShortenNumber(108)}+</Typography>
           <Typography variant="body2" sx={{ opacity: 0.48 }}>
-            Jobs
+            Projekte
           </Typography>
         </Stack>
 
         <Stack spacing={0.5} sx={{ color: 'common.white', width: { xs: 0.5, md: 'auto' } }}>
-          <Typography variant="h4">{fShortenNumber(500000)}+</Typography>
+          <Typography variant="h4">€ {fShortenNumber(10000000)}</Typography>
           <Typography variant="body2" sx={{ opacity: 0.48 }}>
-            Successful Hiring
+            Umsatz
           </Typography>
         </Stack>
       </Stack>
@@ -66,16 +66,16 @@ export default function CareerLandingHero() {
         divider={<Divider orientation="vertical" flexItem sx={{ borderStyle: 'dashed' }} />}
       >
         <Stack spacing={0.5} sx={{ color: 'common.white', width: { xs: 0.5, md: 'auto' } }}>
-          <Typography variant="h4">{fShortenNumber(250000)}+</Typography>
+          <Typography variant="h4">{fShortenNumber(22)}+</Typography>
           <Typography variant="body2" sx={{ opacity: 0.48 }}>
-            Partners
+            Aktuelle Projekte
           </Typography>
         </Stack>
 
         <Stack spacing={0.5} sx={{ color: 'common.white', width: { xs: 0.5, md: 'auto' } }}>
-          <Typography variant="h4">{fShortenNumber(156000)}+</Typography>
+          <Typography variant="h4">{fShortenNumber(50)}+</Typography>
           <Typography variant="body2" sx={{ opacity: 0.48 }}>
-            Employee
+            Mitarbeiter
           </Typography>
         </Stack>
       </Stack>
@@ -144,15 +144,19 @@ export default function CareerLandingHero() {
             >
               <Stack spacing={3}>
                 <Typography variant="h2" sx={{ color: 'common.white' }}>
-                  Wir bauen Ihren Traum
+                  Willkommen bei J&P Globe Trade,
                 </Typography>
-                <Typography variant="h1" sx={{ color: '#FA541C', mt: 0 }}>
-                  Mit Leidenschaft
+                <Typography variant="h3" sx={{ color: '#FA541C', mt: 0 }}>
+                  Ihrem führenden Partner für Bau-Dienstleistungen für Ihr Traumhaus!
                 </Typography>
 
                 <Typography sx={{ color: 'grey.500' }}>
-                  Sorgen Sie dafür, dass sich die ganze Familie beim Bauen wohlfühlt. Wir bieten
-                  24/7 Notfallunterstützung
+                  Bei J&P Globe Trade setzen wir uns dafür ein, Ihre Vision in die Realität
+                  umzusetzen. Als vertrauenswürdiges und erfahrenes Bauunternehmen sind wir darauf
+                  spezialisiert, hochwertige Wohnprojekte zu liefern, die genau auf Ihre
+                  individuellen Bedürfnisse zugeschnitten sind. Egal, ob Sie Ihr Traumhaus von Grund
+                  auf neu bauen oder eine bestehende Immobilie renovieren möchten - wir haben die
+                  Lösung für Sie.
                 </Typography>
                 <Button fullWidth variant="contained" size="large" color="primary">
                   Loslegen

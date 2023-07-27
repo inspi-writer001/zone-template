@@ -64,11 +64,11 @@ export default function CareerJobDetailsSummary({ job }) {
         </Box>
       </Stack>
 
-      <Stack spacing={3}>
+      {/* <Stack spacing={3}>
         <Typography variant="h5">Location</Typography>
 
         <ContactMap offices={locationMap} sx={{ borderRadius: 2 }} />
-      </Stack>
+      </Stack> */}
     </Stack>
   );
 }

@@ -18,14 +18,14 @@ export const careerRoutes = [
   {
     path: '/',
     children: [
-      { title: 'Home', path: '/', element: <LandingPage />, index: true },
+      { title: 'Startseite', path: '/', element: <LandingPage />, index: true }, // Home
       /* { title: 'Job', path: 'jobs', element: <JobsPage /> }, */
-      { title: 'Projects', path: 'projects', element: <CareerProjects /> },
-      { title: 'Job', path: 'job', element: <JobPage /> },
+      { title: 'Projekte', path: 'projects', element: <CareerProjects /> },
+      { title: 'Jobsuche', path: 'job', element: <JobPage /> },
       { title: 'Blog', path: 'posts', element: <BlogPage /> },
       /* { title: 'Post', path: 'post', element: <PostPage /> }, */
-      { title: 'About', path: 'about', element: <AboutPage /> },
-      { title: 'Contact', path: 'contact', element: <ContactPage /> },
+      { title: 'Über uns ', path: 'about', element: <AboutPage /> },
+      { title: 'Kontakt', path: 'contact', element: <ContactPage /> },
     ],
   },
 ];

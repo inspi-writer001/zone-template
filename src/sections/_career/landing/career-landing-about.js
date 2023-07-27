@@ -14,19 +14,19 @@ import { fShortenNumber } from 'src/utils/format-number';
 
 const ROWS = [
   {
-    label: 'projects',
-    total: 20,
-    content: 'Praesent turpis. Praesent blandit laoreet nibh. Nunc nonummy metus.',
+    label: 'Projekte',
+    total: 108,
+    content: 'Wir haben über 20 Projekte abgeschlossen.',
   },
   {
-    label: 'Happy clients',
-    total: 32000,
-    content: 'Praesent turpis. Praesent blandit laoreet nibh. Nunc nonummy metus.',
+    label: 'Umsatz',
+    total: 10000000,
+    content: 'Wir haben eine Umschlagshäufigkeit von über 10 Millionen Euro.',
   },
   {
     label: 'years of experience',
     total: 20,
-    content: 'Praesent turpis. Praesent blandit laoreet nibh. Nunc nonummy metus.',
+    content: 'über 20 Jahre Bauerfahrung.',
   },
 ];
 
@@ -61,10 +61,11 @@ export default function CareerLandingAbout() {
           </Typography>
 
           <Typography sx={{ color: 'text.secondary' }}>
-            In hac habitasse platea dictumst. Aliquam lobortis. Lorem ipsum dolor sit amet,
-            consectetuer adipiscing elit. In dui magna, posuere eget, vestibulum et, tempor auctor,
-            justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
-            turpis egestas.
+            Bei J&P Globe Trade setzen wir uns dafür ein, Ihre Vision in die Realität umzusetzen.
+            Als vertrauenswürdiges und erfahrenes Bauunternehmen sind wir darauf spezialisiert,
+            hochwertige Wohnprojekte zu liefern, die genau auf Ihre individuellen Bedürfnisse
+            zugeschnitten sind. Egal, ob Sie Ihr Traumhaus von Grund auf neu bauen oder eine
+            bestehende Immobilie renovieren möchten - wir haben die Lösung für Sie.
           </Typography>
 
           <Button

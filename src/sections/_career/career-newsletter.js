@@ -26,10 +26,11 @@ export default function CareerNewsletter() {
     >
       <Container>
         <Stack spacing={3} alignItems="center" sx={{ color: 'common.white', textAlign: 'center' }}>
-          <Typography variant="h2">Get The Right Job For You</Typography>
+          <Typography variant="h2">Finden Sie den richtigen Job für Sie</Typography>
 
           <Typography>
-            Subscribe to get updated on latest and relevant career opportunities
+            Abonnieren Sie, um über die neuesten und relevanten Karrieremöglichkeiten auf dem
+            Laufenden zu bleiben
           </Typography>
 
           <InputBase
@@ -46,7 +47,7 @@ export default function CareerNewsletter() {
                     borderBottomLeftRadius: 0,
                   }}
                 >
-                  Subscribe
+                  Abonnieren
                 </Button>
               </InputAdornment>
             }

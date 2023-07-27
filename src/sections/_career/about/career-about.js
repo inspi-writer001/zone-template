@@ -13,10 +13,10 @@ import { fShortenNumber } from 'src/utils/format-number';
 // ----------------------------------------------------------------------
 
 const SUMMARY = [
-  { name: 'Jobs', number: 2230000 },
-  { name: 'Successful Hiring', number: 500000 },
-  { name: 'Partners', number: 250 },
-  { name: 'Employee', number: 1560 },
+  { name: 'Projekte', number: 108 },
+  { name: 'Umsatz', number: 10000000 },
+  { name: 'Aktuelle Projekte', number: 22 },
+  { name: 'Mitarbeiter', number: 50 },
 ];
 
 // ----------------------------------------------------------------------
@@ -67,7 +67,7 @@ export default function CareerAbout() {
         variant="overline"
         sx={{ color: 'primary.main', textAlign: { xs: 'center', md: 'left' } }}
       >
-        About us
+        Über uns
       </Typography>
 
       <Grid
@@ -79,19 +79,21 @@ export default function CareerAbout() {
         }}
       >
         <Grid xs={12} md={6} lg={5}>
-          <Typography variant="h2">We Make The Best For All Our Customers.</Typography>
+          <Typography variant="h2">Wir machen das Beste für alle unsere Kunden.</Typography>
         </Grid>
 
         <Grid xs={12} md={6} lg={6} sx={{ color: 'text.secondary' }}>
           <Stack spacing={{ xs: 3, md: 10 }} direction={{ xs: 'column', md: 'row' }}>
             <Typography>
-              Curabitur ullamcorper ultricies nisi. Sed mollis, eros et ultrices tempus, mauris
-              ipsum aliquam libero, non adipiscing dolor urna a orci.
+              Bei J&P Globe Trade setzen wir uns dafür ein, Ihre Vision in die Realität umzusetzen.
+              Als vertrauenswürdiges und erfahrenes Bauunternehmen sind wir darauf spezialisiert,
+              hochwertige Wohnprojekte zu liefern, die genau auf Ihre individuellen Bedürfnisse
+              zugeschnitten sind.
             </Typography>
 
             <Typography>
-              Donec vitae sapien ut libero venenatis faucibus. Vestibulum fringilla pede sit amet
-              augue. Vivamus euismod mauris.
+              Egal, ob Sie Ihr Traumhaus von Grund auf neu bauen oder eine bestehende Immobilie
+              renovieren möchten - wir haben die Lösung für Sie.
             </Typography>
           </Stack>
         </Grid>
@@ -125,11 +127,11 @@ function Section() {
           }}
         >
           <Typography variant="h2" paragraph>
-            Our Agency Has Been
+            J and P Globe Trade
           </Typography>
           <Typography sx={{ opacity: 0.72 }}>
-            Hello. Our agency has been present for over 20 years. We make the best for all our
-            customers.
+            Hallo. Unsere Agentur ist seit über 20 Jahren präsent. Wir machen das Beste für alle
+            unsere Kunden
           </Typography>
         </Stack>
 

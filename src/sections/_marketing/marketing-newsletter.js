@@ -34,10 +34,10 @@ export default function MarketingNewsletter({ sx, ...other }) {
             />
 
             <Stack spacing={1}>
-              <Typography variant="h4">Sign Up For Newsletter</Typography>
+              <Typography variant="h4">Anmeldung für Newsletter</Typography>
 
               <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                Receive 50% discount on first project
+                Erhalten Sie 50 % Rabatt auf das erste Projekt
               </Typography>
             </Stack>
           </Stack>
@@ -59,7 +59,7 @@ export default function MarketingNewsletter({ sx, ...other }) {
                       borderBottomLeftRadius: 0,
                     }}
                   >
-                    Sign Up
+                    Anmeldung
                   </Button>
                 </InputAdornment>
               ),

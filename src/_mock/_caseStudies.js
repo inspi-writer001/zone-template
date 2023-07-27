@@ -67,7 +67,7 @@ export const _caseStudies = TITLE.map((_, index) => {
     website: 'https://example.com/',
     description: _mock.description(index),
     heroUrl: '/assets/images/marketing/marketing_post_hero.jpg',
-    coverUrl: `/assets/images/marketing/marketing_${index + 1}.jpg`,
+    coverUrl: `/assets/images/houses/house.jpeg`,
     how_we_work:
       'Nullam tincidunt adipiscing enim. Mauris sollicitudin fermentum libero. Pellentesque auctor neque nec urna. Sed fringi',
     results:

@@ -8,7 +8,7 @@ export default function TravelContactPage() {
   return (
     <>
       <Helmet>
-        <title>Contact Us</title>
+        <title>J and P Globe Trade</title>
       </Helmet>
 
       <TravelContactView />

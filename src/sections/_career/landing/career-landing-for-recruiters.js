@@ -47,8 +47,6 @@ export default function CareerLandingForRecruiters() {
 
             <Typography variant="h2">Möchtest du uns beitreten? </Typography>
 
-            <Typography sx={{ mt: 3, mb: 5, opacity: 0.72 }}>Other Random Description</Typography>
-
             <Button
               variant="contained"
               size="large"

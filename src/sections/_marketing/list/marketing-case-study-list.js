@@ -25,7 +25,7 @@ export default function MarketingCaseStudyList({ caseStudies }) {
 
   return (
     <>
-      <Tabs
+      {/* <Tabs
         value={tab}
         scrollButtons="auto"
         variant="scrollable"
@@ -35,7 +35,7 @@ export default function MarketingCaseStudyList({ caseStudies }) {
         {categories.map((category) => (
           <Tab key={category} value={category} label={category} />
         ))}
-      </Tabs>
+      </Tabs> */}
 
       <Box
         sx={{

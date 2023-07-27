@@ -8,7 +8,7 @@ export default function CareerJobPage() {
   return (
     <>
       <Helmet>
-        <title>J & P Globe</title>
+        <title>J & P Globe Trade</title>
       </Helmet>
 
       <CareerJobView />

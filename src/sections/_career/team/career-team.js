@@ -24,11 +24,10 @@ export default function CareerTeam({ members }) {
           mb: { xs: 8, md: 10 },
         }}
       >
-        <Typography variant="h2">Our Team</Typography>
+        <Typography variant="h2">Unser Team</Typography>
 
         <Typography sx={{ color: 'text.secondary' }}>
-          Etiam sollicitudin, ipsum eu pulvinar rutrum, tellus ipsum laoreet sapien, quis venenatis
-          ante odio sit amet eros.
+          Team Text....
         </Typography>
       </Stack>
 

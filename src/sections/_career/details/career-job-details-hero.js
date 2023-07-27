@@ -112,7 +112,7 @@ export default function CareerJobDetailsHero({ job }) {
                   size="large"
                   color="primary"
                 >
-                  Apply Now
+                  Jetzt bewerben
                 </Button>
 
                 <Typography variant="body2" sx={{ color: 'common.white' }}>

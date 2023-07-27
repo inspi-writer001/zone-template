@@ -27,13 +27,10 @@ export default function CareerAboutOurVision() {
       >
         <Grid xs={12} md={3}>
           <Typography variant="h3" sx={{ pt: { md: 5 } }}>
-            Fusce convallis metus id felis luctus
+            Unsere Vision
           </Typography>
 
-          <Typography sx={{ color: 'text.secondary', mt: 3 }}>
-            Fusce convallis metus id felis luctus adipiscing. Etiam imperdiet imperdiet orci.
-            Vestibulum eu odio. Phasellus nec sem in justo pellentesque facilisis.
-          </Typography>
+          <Typography sx={{ color: 'text.secondary', mt: 3 }}>Vision Text...</Typography>
         </Grid>
 
         {mdUp && (
@@ -49,13 +46,10 @@ export default function CareerAboutOurVision() {
 
         <Grid xs={12} md={3}>
           <Typography variant="h3" sx={{ pt: { md: 5 } }}>
-            Fusce convallis metus id felis luctus
+            Unsere Aufgabe
           </Typography>
 
-          <Typography sx={{ color: 'text.secondary', mt: 3 }}>
-            Fusce convallis metus id felis luctus adipiscing. Etiam imperdiet imperdiet orci.
-            Vestibulum eu odio. Phasellus nec sem in justo pellentesque facilisis.
-          </Typography>
+          <Typography sx={{ color: 'text.secondary', mt: 3 }}>Mission Text</Typography>
         </Grid>
       </Grid>
     </Container>
