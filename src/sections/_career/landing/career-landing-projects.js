@@ -34,12 +34,6 @@ export default function CareerProjects() {
         <MarketingCaseStudyList caseStudies={_caseStudies} />
       </Container>
 
-      <MarketingTestimonial testimonials={_testimonials} />
-
-      <BlogMarketingLatestPosts posts={_marketingPosts.slice(0, 4)} />
-
-      <MarketingLandingFreeSEO />
-
       <MarketingNewsletter />
     </>
   );

@@ -23,12 +23,6 @@ export default function CareerAboutView() {
 
       <CareerTeam members={_members} />
 
-      <CareerTestimonial testimonials={_testimonials} />
-
-      <CareerOurClients brands={_brandsColor} />
-
-      <CareerLatestPosts posts={_careerPosts.slice(0, 5)} />
-
       <CareerNewsletter />
     </>
   );
