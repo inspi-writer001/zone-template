@@ -114,18 +114,20 @@ export default function CareerJobModal(props) {
                 <FormControlLabel value="Nie" control={<Radio />} label="Nie" />
               </RadioGroup>
             </FormControl>
-            <FormControl component="fieldset">
-              <FormLabel component="legend">Kategoria Prawa Jazdy:</FormLabel>
-              <RadioGroup
-                aria-label="license_category"
-                name="license_category"
-                value={formData.licenseCategory}
-                onChange={handleInputChange}
-              >
-                <FormControlLabel value="B" control={<Radio />} label="B" />
-                <FormControlLabel value="C" control={<Radio />} label="C" />
-              </RadioGroup>
-            </FormControl>
+            {formData.license === 'Tak' && (
+              <FormControl component="fieldset">
+                <FormLabel component="legend">Kategoria Prawa Jazdy:</FormLabel>
+                <RadioGroup
+                  aria-label="license_category"
+                  name="license_category"
+                  value={formData.licenseCategory}
+                  onChange={handleInputChange}
+                >
+                  <FormControlLabel value="B" control={<Radio />} label="B" />
+                  <FormControlLabel value="C" control={<Radio />} label="C" />
+                </RadioGroup>
+              </FormControl>
+            )}
             <FormControl component="fieldset">
               <FormLabel component="legend">Umiejętności:</FormLabel>
               <RadioGroup
