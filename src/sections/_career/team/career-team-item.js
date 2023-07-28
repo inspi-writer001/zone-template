@@ -1,14 +1,11 @@
-import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
-import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { alpha, styled } from '@mui/material/styles';
-import { Grid, Card, CardContent } from '@mui/material';
+import { Card, Grid, CardMedia } from '@mui/material';
 
 import { bgGradient } from 'src/theme/css';
-import { RouterLink } from 'src/routes/components';
 
 // ----------------------------------------------------------------------
 
@@ -35,54 +32,46 @@ const StyledOverlay = styled('div')(({ theme }) => ({
 
 const members = [
   {
-    name: 'Grzegorz Łuczak(CEO)',
+    name: 'Grzegorz Łuczak ',
     image: '/assets/images/portrait/ceo.png',
     role: 'CEO',
   },
-  { name: 'Agnieszka (CFO)', image: '/assets/images/portrait/cfo.png', role: 'CFO' },
+  { name: 'Agnieszka ', image: '/assets/images/portrait/cfo.png', role: 'CFO' },
   {
-    name: 'Paulina (Genral Manager)',
+    name: 'Paulina ',
     image: '/assets/images/portrait/general-manager.png',
     role: 'General Manager',
   },
 ];
-export default function CareerTeamItem() {
+export default function CareerTeamItem({ member }) {
   return (
-    <Box>
-      <Grid
-        container
-        justifyContent="space-betwenn"
-        spacing={2}
-        sx={{
-          borderRadius: 2,
-        }}
-      >
+    <Box sx={{ mb: 3 }}>
+      <Grid container spacing={2}>
         {members.map((team) => (
-          <Grid item>
+          <Grid item md={4}>
             <Card>
-              <CardMedia component="img" alt={team.name} image={team.image} height="400px" />
-              <CardContent>
-                <Stack
-                  spacing={1}
+              <StyledOverlay>
+                <Box
                   sx={{
-                    p: 3,
-                    bgcolor: 'background.neutral',
+                    top: 0,
+                    bottom: 0,
+                    zIndex: 9,
+                    m: 'auto',
+                    position: 'absolute',
+                    color: 'common.white',
                   }}
                 >
-                  <Link component={RouterLink} href="#" color="primary.main" variant="h5">
+                  <Typography variant="h6" align="center">
                     {team.name}
-                  </Link>
+                  </Typography>
 
-                  <Typography
-                    variant="body2"
-                    sx={{
-                      color: 'text.secondary',
-                    }}
-                  >
+                  <Typography variant="body2" align="center" sx={{ opacity: 0.72, pb: 1 }}>
                     {team.role}
                   </Typography>
-                </Stack>
-              </CardContent>
+                </Box>
+              </StyledOverlay>
+
+              <CardMedia component="img" image={team.image} alt={team.name} height="500px" />
             </Card>
           </Grid>
         ))}
@@ -90,3 +79,11 @@ export default function CareerTeamItem() {
     </Box>
   );
 }
+
+CareerTeamItem.propTypes = {
+  member: PropTypes.shape({
+    name: PropTypes.string,
+    photo: PropTypes.string,
+    role: PropTypes.string,
+  }),
+};

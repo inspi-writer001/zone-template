@@ -1,8 +1,12 @@
+/* eslint-disable import/no-extraneous-dependencies */
+import { useRef } from 'react';
+
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
 import { _socials } from 'src/_mock';
 import Iconify from 'src/components/iconify';
@@ -10,6 +14,22 @@ import Iconify from 'src/components/iconify';
 // ----------------------------------------------------------------------
 
 export default function CareerContactInfo() {
+  const textRef = useRef(null);
+
+  const handleCopyToClipboard = () => {
+    // Select the text
+    textRef.current.select();
+
+    // Copy the selected text to the clipboard
+    document.execCommand('copy');
+
+    // Remove the selection to avoid disrupting user experience
+    window.getSelection().removeAllRanges();
+
+    // Optional: Show a confirmation or toast message
+    alert('Phone Number Copied!');
+  };
+
   return (
     <Container
       sx={{
@@ -41,8 +61,20 @@ export default function CareerContactInfo() {
 
         <Stack spacing={1}>
           <Typography variant="subtitle2">Telefon</Typography>
-
-          <Typography variant="body2">+48 666 838 711</Typography>
+          <input
+            ref={textRef}
+            type="text"
+            value="+48666838711"
+            readOnly
+            style={{ position: 'absolute', left: '-9999px' }} // Make the input invisible
+          />
+          <Typography
+            variant="body2"
+            sx={{ color: 'primary.main', cursor: 'pointer' }}
+            onClick={handleCopyToClipboard}
+          >
+            +48 666 838 711
+          </Typography>
         </Stack>
 
         <Stack spacing={1}>

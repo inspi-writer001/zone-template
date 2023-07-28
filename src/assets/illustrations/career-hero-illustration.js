@@ -62,7 +62,7 @@ function CareerHeroIllustration({ sx, ...other }) {
           <CardMedia
             component="img"
             width="100%"
-            image="/assets/images/hero/construct.png"
+            image="/assets/images/houses/house-1.png"
             alt="Hero"
           />
         </Card>
@@ -71,7 +71,23 @@ function CareerHeroIllustration({ sx, ...other }) {
           <CardMedia
             component="img"
             width="100%"
-            image="/assets/images/hero/construct.png"
+            image="/assets/images/houses/house-2.png"
+            alt="Hero"
+          />
+        </Card>
+        <Card sx={{ width: '100%' }}>
+          <CardMedia
+            component="img"
+            width="100%"
+            image="/assets/images/houses/house-3.png"
+            alt="Hero"
+          />
+        </Card>
+        <Card sx={{ width: '100%' }}>
+          <CardMedia
+            component="img"
+            width="100%"
+            image="/assets/images/houses/house-4.png"
             alt="Hero"
           />
         </Card>
