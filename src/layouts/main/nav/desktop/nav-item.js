@@ -43,7 +43,7 @@ export const NavItem = forwardRef(
 
     // Default
     return (
-      <Link component={RouterLink} href={item.path} color="inherit" underline="none">
+      <Link component={RouterLink} href={item.path} color="text.secondary" underline="none">
         {renderContent}
       </Link>
     );

@@ -69,7 +69,7 @@ export default function CareerTeamItem() {
                     bgcolor: 'background.neutral',
                   }}
                 >
-                  <Link component={RouterLink} href="#" color="inherit" variant="h5">
+                  <Link component={RouterLink} href="#" color="primary.main" variant="h5">
                     {team.name}
                   </Link>
 
