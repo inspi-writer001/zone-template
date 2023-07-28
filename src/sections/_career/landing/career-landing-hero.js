@@ -144,20 +144,26 @@ export default function CareerLandingHero() {
             >
               <Stack spacing={3}>
                 <Typography variant="h2" sx={{ color: 'common.white' }}>
-                  Willkommen bei J&P Globe Trade,
+                  Willkommen bei
                 </Typography>
-                <Typography variant="h3" sx={{ color: '#FA541C', mt: 0 }}>
-                  Ihrem führenden Partner für Bau-Dienstleistungen für Ihr Traumhaus!
+                <Typography variant="h1" sx={{ color: '#FA541C', mt: 0 }}>
+                  J&P Globe Trade
                 </Typography>
 
                 <Typography sx={{ color: 'grey.500' }}>
-                  Bei J&P Globe Trade setzen wir uns dafür ein, Ihre Vision in die Realität
+                  Ihrem führenden Partner für Bau-Dienstleistungen für Ihr Traumhaus!
+                  {/* Bei J&P Globe Trade setzen wir uns dafür ein, Ihre Vision in die Realität
                   umzusetzen. Als vertrauenswürdiges und erfahrenes Bauunternehmen sind wir darauf
                   spezialisiert, hochwertige Wohnprojekte zu liefern, die genau auf Ihre
                   individuellen Bedürfnisse zugeschnitten sind. Egal, ob Sie Ihr Traumhaus von Grund
                   auf neu bauen oder eine bestehende Immobilie renovieren möchten - wir haben die
-                  Lösung für Sie.
+                  Lösung für Sie. */}
                 </Typography>
+                {!mdUp && (
+                  <Grid xs={12} md={6} lg={6}>
+                    <CareerHeroIllustration />
+                  </Grid>
+                )}
                 <Button fullWidth variant="contained" size="large" color="primary">
                   Loslegen
                 </Button>

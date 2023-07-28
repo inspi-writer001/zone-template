@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
@@ -62,16 +63,22 @@ export default function Header({ headerOnDark }) {
           sx={{ height: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
         >
           <Box sx={{ lineHeight: 0, position: 'relative' }}>
-            <Stack direction="row">
-              <img src="/assets/logo/logo.png" alt="logo" width="100px" />
-              <Typography
-                variant="h3"
-                sx={{ display: { lg: 'block', md: 'block', sm: 'none', xs: 'none' }, my: 'auto' }}
-                color="initial"
-              >
-                J&P Globe Trade
-              </Typography>
-            </Stack>
+            <Link href="/" target="_blank" underline="none" rel="noopener">
+              <Stack direction="row">
+                <img src="/assets/logo/logo.png" alt="logo" width="100px" />
+                <Typography
+                  variant="h3"
+                  sx={{
+                    display: { lg: 'block', md: 'block', sm: 'none', xs: 'none' },
+                    my: 'auto',
+                    textDecoration: 'none',
+                  }}
+                  color="primary.main"
+                >
+                  J&P Globe Trade
+                </Typography>
+              </Stack>
+            </Link>
             {/* <Link href="/" target="_blank" rel="noopener">
               <Label
                 color="info"
