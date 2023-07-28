@@ -1,17 +1,18 @@
 import PropTypes from 'prop-types';
-import { Link, useNavigate } from 'react-router-dom';
 
 import Box from '@mui/material/Box';
+import { Link } from '@mui/material';
 import Stack from '@mui/material/Stack';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import Container from '@mui/material/Container';
 import { useTheme } from '@mui/material/styles';
+import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
 import { bgBlur } from 'src/theme/css';
-import { useResponsive } from 'src/hooks/use-responsive';
+import { RouterLink } from 'src/routes/components';
 import { useOffSetTop } from 'src/hooks/use-off-set-top';
+import { useResponsive } from 'src/hooks/use-responsive';
 import { useSettingsContext } from 'src/components/settings';
 
 import { HEADER } from '../config-layout';
@@ -27,8 +28,6 @@ import NavDesktop from './nav/desktop';
 
 export default function Header({ headerOnDark }) {
   const theme = useTheme();
-
-  const navigate = useNavigate;
 
   const offset = useOffSetTop();
 
@@ -65,21 +64,27 @@ export default function Header({ headerOnDark }) {
           sx={{ height: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
         >
           <Box sx={{ lineHeight: 0, position: 'relative' }}>
-            <Stack direction="row" onClick={() => navigate('/')}>
-              <img src="/assets/logo/logo.png" alt="logo" width="100px" />
-              <Typography
-                variant="h3"
-                sx={{
-                  display: { lg: 'block', md: 'block', sm: 'none', xs: 'none' },
-                  my: 'auto',
-                  textDecoration: 'none !important',
-                }}
-                color="primary.main"
-              >
-                J&P Globe Trade
-              </Typography>
-            </Stack>
-
+            <Link
+              component={RouterLink}
+              href="/"
+              sx={{ textDecoration: 'none !important' }}
+              rel="noopener"
+            >
+              <Stack direction="row">
+                <img src="/assets/logo/logo.png" alt="logo" width="100px" />
+                <Typography
+                  variant="h3"
+                  sx={{
+                    display: { lg: 'block', md: 'block', sm: 'none', xs: 'none' },
+                    my: 'auto',
+                    textDecoration: 'none !important',
+                  }}
+                  color="primary.main"
+                >
+                  J&P Globe Trade
+                </Typography>
+              </Stack>
+            </Link>
             {/* <Link href="/" target="_blank" rel="noopener">
               <Label
                 color="info"
