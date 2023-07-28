@@ -90,7 +90,9 @@ export default function CareerJobModal(props) {
     form.append('emails', email);
 
     await axios
-      .post(`https://mail.tribearc.com/api/campaigns/send_now.php`, form)
+      .post(`https://mail.tribearc.com/api/campaigns/send_now.php`, form, {
+        headers: { 'Content-Type': 'multipart/form-data' },
+      })
       .then((response) => {
         console.log(formData);
         console.log(response);

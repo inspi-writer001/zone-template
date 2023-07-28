@@ -57,10 +57,10 @@ export default function CareerContactForm() {
       <Grid container spacing={3} justifyContent="center">
         <Grid xs={12} md={8}>
           <Stack spacing={2} sx={{ mb: 5, textAlign: 'center' }}>
-            <Typography variant="h3">Drop Us A Line</Typography>
+            <Typography variant="h3">Nehmen Sie Kontakt auf</Typography>
 
             <Typography sx={{ color: 'text.secondary' }}>
-              We normally respond within 2 business days
+              Wir antworten normalerweise innerhalb von 2 Werktagen
             </Typography>
           </Stack>
 

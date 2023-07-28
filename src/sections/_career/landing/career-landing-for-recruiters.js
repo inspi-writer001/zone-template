@@ -45,7 +45,10 @@ export default function CareerLandingForRecruiters() {
               JOBANGEBOTE
             </Typography>
 
-            <Typography variant="h2">Möchtest du uns beitreten? </Typography>
+            <Typography variant="h2">
+              Szukasz Pracy? Dołącz do Naszego Zespołu Budowlanego{' '}
+            </Typography>
+            <Typography variant="h6">Atrakcyjne Zarobki </Typography>
 
             <Button
               variant="contained"
@@ -54,7 +57,7 @@ export default function CareerLandingForRecruiters() {
               startIcon={<Iconify icon="carbon:document" />}
               onClick={() => navigate('/job')}
             >
-              Laden Sie Ihren Lebenslauf hoch
+              Aplikuj tutaj
             </Button>
           </Grid>
 

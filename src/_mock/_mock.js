@@ -73,6 +73,7 @@ export const _mock = {
     portrait: (index) => `/assets/images/portrait/portrait_${index + 1}.jpg`,
     career: (index) => `/assets/images/career/career_${index + 1}.jpg`,
     marketing: (index) => `/assets/images/marketing/marketing_${index + 1}.jpg`,
+    houses: (index) => `/assets/images/houses/house-${index + 1}.png`,
     course: (index) => `/assets/images/course/course_${index + 1}.jpg`,
   },
   video: (index) =>

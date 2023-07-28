@@ -18,7 +18,7 @@ const content = (name) => `
 <br/>
 <br/>
 <br/>
-<p><img alt="alt marketing" src="/assets/images/${name}/${name}_post_01.jpg" /></p>
+<p><img alt="alt marketing" src="/assets/images/houses/house-1.png" /></p>
 <br/>
 <br/>
 <br/>
@@ -79,26 +79,26 @@ export const _marketingPosts = [...Array(12)].map((_, index) => ({
   ...base(index),
   content: content('marketing'),
   coverUrl: _mock.image.marketing(index),
-  heroUrl: `/assets/images/marketing/marketing_post_hero.jpg`,
+  heroUrl: `/assets/images/houses/house-1.png`,
 }));
 
 export const _travelPosts = [...Array(12)].map((_, index) => ({
   ...base(index),
   content: content('travel'),
   coverUrl: _mock.image.travel(index),
-  heroUrl: `/assets/images/travel/travel_post_hero.jpg`,
+  heroUrl: `/assets/images/houses/house-1.png`,
 }));
 
 export const _careerPosts = [...Array(12)].map((_, index) => ({
   ...base(index),
   content: content('career'),
   coverUrl: _mock.image.career(index),
-  heroUrl: `/assets/images/career/career_post_hero.jpg`,
+  heroUrl: `/assets/images/houses/house-1.png`,
 }));
 
 export const _coursePosts = [...Array(12)].map((_, index) => ({
   ...base(index),
   content: content('course'),
   coverUrl: _mock.image.course(index),
-  heroUrl: `/assets/images/course/course_post_hero.jpg`,
+  heroUrl: `/assets/images/houses/house-1.png`,
 }));

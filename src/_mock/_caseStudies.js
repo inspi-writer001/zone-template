@@ -4,14 +4,14 @@ import { _tags } from './assets';
 // ----------------------------------------------------------------------
 
 const TITLE = [
-  'Bank of America',
-  'Technology Nixon',
-  'Turn Key Smart',
-  'Digital Shose',
-  'Action Car',
-  'The Zone UI',
-  'Minimal UI',
-  'Network Firefox',
+  'Project 1',
+  'Project 2',
+  'Project 3',
+  'Project 4',
+  'Project 5',
+  'Project 6',
+  'Project 7',
+  'Project 8',
 ];
 
 const CONTENT = `
@@ -50,12 +50,12 @@ const CONTENT = `
 
 export const _caseStudies = TITLE.map((_, index) => {
   const galleryImgs = [
-    _mock.image.marketing(0),
-    _mock.image.marketing(1),
-    _mock.image.marketing(2),
-    _mock.image.marketing(3),
-    _mock.image.marketing(4),
-    _mock.image.marketing(5),
+    _mock.image.houses(0),
+    _mock.image.houses(1),
+    _mock.image.houses(2),
+    _mock.image.houses(3),
+    _mock.image.houses(4),
+    _mock.image.houses(5),
   ];
 
   return {
@@ -67,7 +67,7 @@ export const _caseStudies = TITLE.map((_, index) => {
     website: 'https://example.com/',
     description: _mock.description(index),
     heroUrl: '/assets/images/marketing/marketing_post_hero.jpg',
-    coverUrl: `/assets/images/houses/house.jpeg`,
+    coverUrl: `/assets/images/houses/house-${index + 1}.png`,
     how_we_work:
       'Nullam tincidunt adipiscing enim. Mauris sollicitudin fermentum libero. Pellentesque auctor neque nec urna. Sed fringi',
     results:

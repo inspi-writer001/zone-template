@@ -15,8 +15,6 @@ export default function CareerContactView() {
       <ContactMap offices={_offices} />
 
       <CareerContactForm />
-
-      <CareerNewsletter />
     </>
   );
 }

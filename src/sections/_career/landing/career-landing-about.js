@@ -16,17 +16,20 @@ const ROWS = [
   {
     label: 'Projekte',
     total: 108,
-    content: 'Wir haben über 20 Projekte abgeschlossen.',
+    content:
+      'Bauarbeiten in Deutschland und Österreich zeichnen sich durch hohe Qualität, Präzision und fortschrittliche Techniken aus.',
   },
   {
-    label: 'Umsatz',
-    total: 10000000,
-    content: 'Wir haben eine Umschlagshäufigkeit von über 10 Millionen Euro.',
+    label: 'Quadratmeter',
+    total: 15000,
+    content:
+      'Wir haben eine Vielzahl von Bauarbeiten erfolgreich abgeschlossen, darunter Neubauten, Renovierungen, Anbauten und viele weitere Projekte.',
   },
   {
-    label: 'years of experience',
-    total: 20,
-    content: 'über 20 Jahre Bauerfahrung.',
+    label: 'Erfahrungsjahre',
+    total: 25,
+    content:
+      'Mit unserer langjährigen Erfahrung in der Baubranche können wir Ihnen erstklassige Dienstleistungen bieten und Ihre Projekte mit Fachwissen und Sorgfalt realisieren.',
   },
 ];
 
@@ -53,7 +56,7 @@ export default function CareerLandingAbout() {
           }}
         >
           <Typography component="div" variant="overline" sx={{ color: 'text.disabled' }}>
-            Über uns
+            Kundenzufriedenheit
           </Typography>
 
           <Typography variant="h2" sx={{ my: 3 }}>
@@ -61,11 +64,15 @@ export default function CareerLandingAbout() {
           </Typography>
 
           <Typography sx={{ color: 'text.secondary' }}>
-            Bei J&P Globe Trade setzen wir uns dafür ein, Ihre Vision in die Realität umzusetzen.
-            Als vertrauenswürdiges und erfahrenes Bauunternehmen sind wir darauf spezialisiert,
-            hochwertige Wohnprojekte zu liefern, die genau auf Ihre individuellen Bedürfnisse
-            zugeschnitten sind. Egal, ob Sie Ihr Traumhaus von Grund auf neu bauen oder eine
-            bestehende Immobilie renovieren möchten - wir haben die Lösung für Sie.
+            Kundenzufriedenheit Die Qualität von J&P ist erstklassig und herausragend. Als
+            etabliertes Bauunternehmen haben wir einen unerschütterlichen Ruf für exzellente Arbeit
+            und Kundenzufriedenheit aufgebaut. Unsere Fachleute und Handwerker sind hochqualifiziert
+            und engagiert, um Projekte mit Präzision und Sorgfalt auszuführen. Wir verwenden nur die
+            besten Materialien und modernsten Bautechniken, um sicherzustellen, dass jedes Projekt
+            den höchsten Standards entspricht und lange Bestand hat. Kundenzufriedenheit steht bei
+            uns an erster Stelle, und wir sind stolz darauf, pünktlich und innerhalb des Budgets zu
+            liefern, ohne dabei die Qualität zu beeinträchtigen. Verlassen Sie sich auf J&P, um Ihr
+            Bauvorhaben zuverlässig und professionell zu realisieren.
           </Typography>
 
           <Button

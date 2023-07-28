@@ -1,15 +1,14 @@
-import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
+import CardMedia from '@mui/material/CardMedia';
+import { Card, CardContent } from '@mui/material';
 import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
 import { alpha, styled } from '@mui/material/styles';
 
-import { _socials } from 'src/_mock';
-import Image from 'src/components/image';
 import { bgGradient } from 'src/theme/css';
-import Iconify from 'src/components/iconify';
+import { RouterLink } from 'src/routes/components';
 
 // ----------------------------------------------------------------------
 
@@ -34,49 +33,58 @@ const StyledOverlay = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-export default function CareerTeamItem({ member }) {
+const members = [
+  {
+    name: 'Grzegorz Łuczak(CEO)',
+    image: '/assets/images/portrait/ceo.png',
+    role: 'CEO',
+  },
+  { name: 'Agnieszka (CFO)', image: '/assets/images/portrait/cfo.png', role: 'CFO' },
+  {
+    name: 'Paulina (Genral Manager)',
+    image: '/assets/images/portrait/general-manager.png',
+    role: 'General Manager',
+  },
+];
+export default function CareerTeamItem() {
   return (
-    <Box sx={{ position: 'relative' }}>
-      <StyledOverlay>
-        <Stack
-          spacing={1}
-          alignItems="center"
-          justifyContent="center"
-          sx={{
-            top: 0,
-            width: 1,
-            bottom: 0,
-            zIndex: 9,
-            m: 'auto',
-            position: 'absolute',
-            color: 'common.white',
-          }}
-        >
-          <Typography variant="h6">{member.name}</Typography>
+    <Box>
+      <Stack
+        justifyContent="evenly"
+        spacing={2}
+        direction="row"
+        sx={{
+          borderRadius: 2,
+        }}
+      >
+        {members.map((team) => (
+          <Card>
+            <CardMedia component="img" alt={team.name} image={team.image} height="400px" />
+            <CardContent>
+              <Stack
+                spacing={1}
+                sx={{
+                  p: 3,
+                  bgcolor: 'background.neutral',
+                }}
+              >
+                <Link component={RouterLink} href="#" color="inherit" variant="h5">
+                  {team.name}
+                </Link>
 
-          <Typography variant="body2" sx={{ opacity: 0.72, pb: 1 }}>
-            {member.role}
-          </Typography>
-
-          <Stack direction="row">
-            {_socials.map((social) => (
-              <IconButton key={social.value} color="primary">
-                <Iconify icon={social.icon} />
-              </IconButton>
-            ))}
-          </Stack>
-        </Stack>
-      </StyledOverlay>
-
-      <Image src={member.photo} alt={member.name} ratio="1/1" />
+                <Typography
+                  variant="body2"
+                  sx={{
+                    color: 'text.secondary',
+                  }}
+                >
+                  {team.role}
+                </Typography>
+              </Stack>
+            </CardContent>
+          </Card>
+        ))}
+      </Stack>
     </Box>
   );
 }
-
-CareerTeamItem.propTypes = {
-  member: PropTypes.shape({
-    name: PropTypes.string,
-    photo: PropTypes.string,
-    role: PropTypes.string,
-  }),
-};

@@ -17,8 +17,6 @@ export default function CareerAboutView() {
     <>
       <CareerAbout />
 
-      <CareerAboutOurVision />
-
       <Divider orientation="vertical" sx={{ height: 80, width: 2, mx: 'auto' }} />
 
       <CareerTeam members={_members} />
