@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import CardMedia from '@mui/material/CardMedia';
-import { Card, CardContent } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import { alpha, styled } from '@mui/material/styles';
+import { Grid, Card, CardContent } from '@mui/material';
 
 import { bgGradient } from 'src/theme/css';
 import { RouterLink } from 'src/routes/components';
@@ -49,42 +49,44 @@ const members = [
 export default function CareerTeamItem() {
   return (
     <Box>
-      <Stack
-        justifyContent="evenly"
+      <Grid
+        container
+        justifyContent="space-betwenn"
         spacing={2}
-        direction="row"
         sx={{
           borderRadius: 2,
         }}
       >
         {members.map((team) => (
-          <Card>
-            <CardMedia component="img" alt={team.name} image={team.image} height="400px" />
-            <CardContent>
-              <Stack
-                spacing={1}
-                sx={{
-                  p: 3,
-                  bgcolor: 'background.neutral',
-                }}
-              >
-                <Link component={RouterLink} href="#" color="inherit" variant="h5">
-                  {team.name}
-                </Link>
-
-                <Typography
-                  variant="body2"
+          <Grid item>
+            <Card>
+              <CardMedia component="img" alt={team.name} image={team.image} height="400px" />
+              <CardContent>
+                <Stack
+                  spacing={1}
                   sx={{
-                    color: 'text.secondary',
+                    p: 3,
+                    bgcolor: 'background.neutral',
                   }}
                 >
-                  {team.role}
-                </Typography>
-              </Stack>
-            </CardContent>
-          </Card>
+                  <Link component={RouterLink} href="#" color="inherit" variant="h5">
+                    {team.name}
+                  </Link>
+
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: 'text.secondary',
+                    }}
+                  >
+                    {team.role}
+                  </Typography>
+                </Stack>
+              </CardContent>
+            </Card>
+          </Grid>
         ))}
-      </Stack>
+      </Grid>
     </Box>
   );
 }

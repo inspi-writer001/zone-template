@@ -50,11 +50,10 @@ export default function CareerOurClients({ brands }) {
           mb: { xs: 8, md: 10 },
         }}
       >
-        <Typography variant="h2">Unsere Kunden</Typography>
+        <Typography variant="h2">Zusammenarbeit</Typography>
 
         <Typography sx={{ color: 'text.secondary' }}>
-          Curabitur a felis in nunc fringilla tristique. Fusce egestas elit eget lorem. Etiam vitae
-          tortor.
+          Wir arbeiten nur mit den Besten für das Beste.
         </Typography>
       </Stack>
 

@@ -11,7 +11,7 @@ export default function CareerLandingPage() {
         <title>J & P Globe Trade</title>
       </Helmet>
 
-      <CareerLandingView />
+      <CareerL  andingView />
     </>
   );
 }
