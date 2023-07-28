@@ -63,7 +63,7 @@ export default function Header({ headerOnDark }) {
           sx={{ height: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
         >
           <Box sx={{ lineHeight: 0, position: 'relative' }}>
-            <Link href="/" target="_blank" underline="none" rel="noopener">
+            <Link href="/" target="_blank" underline="none" sx={{ textDecoration : 'none' }} rel="noopener">
               <Stack direction="row">
                 <img src="/assets/logo/logo.png" alt="logo" width="100px" />
                 <Typography
