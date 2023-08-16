@@ -8,7 +8,7 @@ export default function MarketingLandingPage() {
   return (
     <>
       <Helmet>
-        <title>Landing</title>
+        <title>Elite House</title>
       </Helmet>
 
       <MarketingLandingView />

@@ -15,30 +15,42 @@ import TextMaxLine from 'src/components/text-max-line';
 
 // ----------------------------------------------------------------------
 
-const COLORS = ['primary', 'secondary', 'success', 'warning'];
+const COLORS = ['primary', 'secondary', 'success', 'warning', 'primary', 'secondary'];
 
 const SERVICES = [
   {
-    name: 'SEO',
+    name: 'Singaporean Bank account',
     icon: '/assets/icons/service/ic_service_seo.svg',
     content: 'Nunc nonummy metus. Donec elit libero',
     path: paths.marketing.services,
   },
   {
-    name: 'Email Marketing',
+    name: 'Social Commerce Service',
     icon: '/assets/icons/service/ic_service_mail.svg',
     content: 'Nunc nonummy metus. Donec elit libero',
     path: paths.marketing.services,
   },
   {
-    name: 'Search Engine Oprimization',
+    name: 'Mastercard Debit Card',
     icon: '/assets/icons/service/ic_service_analysis.svg',
     content: 'Nunc nonummy metus. Donec elit libero',
     path: paths.marketing.services,
   },
   {
-    name: 'Social Marketing',
+    name: 'Asset re-allocation',
     icon: '/assets/icons/service/ic_service_bullhorn.svg',
+    content: 'Nunc nonummy metus. Donec elit libero',
+    path: paths.marketing.services,
+  },
+  {
+    name: 'Travel',
+    icon: '/assets/icons/service/ic_service_analysis.svg',
+    content: 'Nunc nonummy metus. Donec elit libero',
+    path: paths.marketing.services,
+  },
+  {
+    name: 'Blockchain services',
+    icon: '/assets/icons/service/ic_service_analysis.svg',
     content: 'Nunc nonummy metus. Donec elit libero',
     path: paths.marketing.services,
   },
@@ -63,7 +75,7 @@ export default function MarketingLandingServices() {
         }}
       >
         <Typography variant="overline" sx={{ color: 'text.disabled' }}>
-          Our Services
+          Benefits
         </Typography>
 
         <Typography variant="h2">We Provide</Typography>

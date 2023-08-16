@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import Card from '@mui/material/Card';
@@ -8,6 +9,7 @@ import Typography from '@mui/material/Typography';
 import Label from 'src/components/label';
 import Image from 'src/components/image';
 import Iconify from 'src/components/iconify';
+import ButtonWithModal from 'src/sections/_marketing/utils/modal';
 
 // ----------------------------------------------------------------------
 
@@ -17,6 +19,8 @@ export default function PricingMarketingCard({ plan }) {
   const starterLicense = plan.license === 'Starter';
 
   const premiumLicense = plan.license === 'Premium';
+
+  const [open, setOpen] = useState(false);
 
   return (
     <Card
@@ -29,6 +33,7 @@ export default function PricingMarketingCard({ plan }) {
         }),
       }}
     >
+      {open && <ButtonWithModal open={open} setOpen={setOpen} />}
       {starterLicense && (
         <Label color="info" sx={{ position: 'absolute', top: 24, left: 32 }}>
           POPULAR
@@ -65,6 +70,7 @@ export default function PricingMarketingCard({ plan }) {
       </Stack>
 
       <Button
+        onClick={() => setOpen(true)}
         fullWidth
         size="large"
         color={(premiumLicense && 'primary') || 'inherit'}

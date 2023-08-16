@@ -34,9 +34,9 @@ export default function MarketingLandingView() {
 
       <MarketingLandingServices />
 
-      <MarketingLandingProcess />
+      {/* <MarketingLandingProcess /> */}
 
-      <MarketingLandingCaseStudies caseStudies={_caseStudies.slice(-6)} />
+      {/* <MarketingLandingCaseStudies caseStudies={_caseStudies.slice(-6)} /> */}
 
       <MarketingTeam members={_members} />
 
@@ -48,9 +48,9 @@ export default function MarketingLandingView() {
 
       <BlogMarketingLatestPosts posts={_marketingPosts.slice(0, 4)} />
 
-      <MarketingLandingFreeSEO />
+      {/* <MarketingLandingFreeSEO />
 
-      <MarketingNewsletter />
+      <MarketingNewsletter /> */}
     </>
   );
 }

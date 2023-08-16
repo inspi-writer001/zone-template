@@ -63,13 +63,13 @@ export default function Header({ headerOnDark }) {
         >
           <Box sx={{ lineHeight: 0, position: 'relative' }}>
             <Stack direction="row">
-              <img src="/assets/logo/logo.png" alt="logo" width="100px" />
+              {/* <img src="/assets/logo/logo.png" alt="logo" width="100px" /> */}
               <Typography
                 variant="h3"
                 sx={{ display: { lg: 'block', md: 'block', sm: 'none', xs: 'none' }, my: 'auto' }}
                 color="initial"
               >
-                J&P Globe Trade
+                Elite House
               </Typography>
             </Stack>
             {/* <Link href="/" target="_blank" rel="noopener">

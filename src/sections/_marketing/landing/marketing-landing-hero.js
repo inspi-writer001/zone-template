@@ -47,11 +47,11 @@ export default function MarketingLandingHero() {
             }}
           >
             <Typography variant="overline" sx={{ color: 'secondary.main' }}>
-              Digital Marketing
+              Elite House
             </Typography>
 
             <Typography variant="h1" sx={{ my: 3 }}>
-              Boosts Your Website Traffic
+              Elite House
             </Typography>
 
             <Typography sx={{ color: 'text.secondary' }}>

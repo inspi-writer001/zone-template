@@ -34,7 +34,7 @@ export default function PricingMarketing({ plans }) {
           }}
         >
           <Typography variant="overline" sx={{ color: 'text.disabled' }}>
-            Pricing
+            Become a Member
           </Typography>
 
           <Typography variant="h2">Check Our Pricing</Typography>

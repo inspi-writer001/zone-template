@@ -12,7 +12,7 @@ import { careerRoutes } from './career';
 // ----------------------------------------------------------------------
 
 const IndexPage = lazy(() => import('src/pages/home'));
-const LandingPage = lazy(() => import('src/pages/career/landing'));
+const LandingPage = lazy(() => import('src/pages/marketing/landing'));
 const SupportPage = lazy(() => import('src/pages/support'));
 
 export default function Router() {
